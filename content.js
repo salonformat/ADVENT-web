@@ -19,7 +19,7 @@ const ARTIST_COPY={de:[
 'Ein kleines Motiv geht auf Reisen|Felice Rix-Ueno entwarf Stoffe, Tapeten, Stickereien und vieles mehr für die Wiener Werkstätte. Später lebte und lehrte sie in Japan. Ihre Entwürfe sind voller kleiner, fantasievoller Motive.|Wähle Stern, Feder oder Quaste. Setze dein Motiv an drei Stellen auf die Fläche. Du kannst mit Maus, Finger oder Tastatur arbeiten.|Stern, Feder und Quaste',
 'Was ist dir aufgefallen?|Berthe Morisot gehörte zum Kreis des Impressionismus. Sie malte Menschen und alltägliche Situationen. Ihre Bilder lenken den Blick auch auf kurze Momente und kleine Veränderungen im Licht.|Schau dir die gezeichnete Zimmerecke an. Blende sie dann aus und beantworte die Frage aus dem Gedächtnis.|Ein Fenster und das Licht im Zimmer',
 'Eine Vase mit Charakter|Vally Wieselthier war Keramikerin. Sie arbeitete für die Wiener Werkstätte und später in den USA. Ihre Keramik zeigt, dass ein Gefäß mehr sein kann als ein praktischer Behälter.|Verändere Bauch und Öffnung der Vase. Sie muss nicht symmetrisch sein. Welche Form würdest du gern in die Hand nehmen?|Eine frei gezeichnete Vase',
-'Eine Karte für jemanden|Mela Koehler gestaltete unter anderem Postkarten für die Wiener Werkstätte. Eine kleine Karte kann Bild, Schrift und einen persönlichen Gruß zusammenbringen.|Schreibe einen kurzen Gruß. Wähle dazu einen gezeichneten Rand. Die Karte kannst du speichern und herunterladen.|Eine illustrierte Postkarte',
+'Eine Karte für jemanden|Mela Koehler gestaltete unter anderem Postkarten für die Wiener Werkstätte. Eine kleine Karte kann Bild, Schrift und einen persönlichen Gruß zusammenbringen.|Schreibe einen kurzen Gruß. Wähle dazu einen gezeichneten Rand. Die Karte kannst du herunterladen.|Eine illustrierte Postkarte',
 'Eine Linie im Raum|Ruth Asawa formte durchlässige Skulpturen aus Draht. Man kann durch sie hindurchsehen. Zwischen den Linien gehört auch die Luft zur Form.|Verändere die Anzahl der Drahtschlaufen. Achte darauf, wie sich die offenen Zwischenräume verändern.|Ein Körper aus Drahtschlaufen',
 'Ein Selbstporträt ohne Spiegel|Paula Modersohn-Becker malte viele Frauen, Mädchen und Selbstbildnisse. Sie suchte einen eigenen Blick auf Menschen und folgte dabei nicht einfach dem damaligen Schönheitsideal.|Ergänze die drei Satzanfänge. Lass Beruf und Aussehen weg. Was erzählt sonst noch etwas über dich?|Ein Spiegel mit einem leeren Blatt',
 'Eine Form zum Aufklappen|Lygia Clark wollte, dass Menschen Kunst selbst erfahren und verändern. Ihre beweglichen Arbeiten stellen die Frage, was zwischen einem Objekt und der Person passiert, die damit umgeht.|Klappe die verbundenen Flächen auf und zu. Schau seitlich und von oben darauf. Welche Stellung überrascht dich?|Miteinander verbundene Flächen',
@@ -125,3 +125,175 @@ Object.assign(UI.fr,{intro:'Chaque jour de l’Avent, une artiste, une courte hi
 Object.assign(UI.de,{subtitle:'24 Künstlerinnen. Ein Kunst-Advent von Salon Format.'});
 Object.assign(UI.en,{subtitle:'24 women artists. An art Advent calendar by Salon Format.'});
 Object.assign(UI.fr,{subtitle:'24 artistes femmes. Un calendrier de l’Avent par Salon Format.'});
+
+// Original editorial additions, verified against the linked museum sources, 8 November 2026.
+const ARTIST_DETAILS=[
+  {
+    "de": "1918 entwarf sie Marionetten für das Stück „König Hirsch“. Auch die Figuren setzte sie aus klaren, geometrischen Formen zusammen.",
+    "en": "In 1918 she designed marionettes for the play King Stag, building the figures from clear geometric shapes.",
+    "fr": "En 1918, elle a conçu les marionnettes de la pièce Le Roi cerf, en assemblant des formes géométriques simples.",
+    "url": "https://www.moma.org/artists/5777-sophie-taeuber-arp",
+    "museum": "MoMA"
+  },
+  {
+    "de": "Ab 1843 veröffentlichte sie ihr Algenbuch. Jeden einzelnen fotografischen Abdruck stellte sie selbst her.",
+    "en": "She began publishing her book of algae in 1843, making every photographic print herself.",
+    "fr": "Elle a commencé à publier son livre sur les algues en 1843, réalisant elle-même chaque tirage photographique.",
+    "url": "https://www.nhm.ac.uk/discover/anna-atkins-cyanotypes-the-first-book-of-photographs.html",
+    "museum": "Natural History Museum"
+  },
+  {
+    "de": "1913 gestaltete sie mit dem Dichter Blaise Cendrars ein Buch zum Auffalten. Gedicht und Farbflächen laufen darin nebeneinander über ein langes Blatt.",
+    "en": "In 1913 she made a fold-out book with the poet Blaise Cendrars. The poem and her fields of colour run side by side along one long sheet.",
+    "fr": "En 1913, elle a créé un livre en accordéon avec le poète Blaise Cendrars. Le poème et ses couleurs se déploient côte à côte sur une longue feuille.",
+    "url": "https://www.metmuseum.org/art/collection/search/823703",
+    "museum": "The Met"
+  },
+  {
+    "de": "Für die Firma Salubra entwickelte sie 1929 eine Tapetenkollektion mit 20 Mustern. Ihre Entwürfe waren also auch für Räume außerhalb von Ausstellungen gedacht.",
+    "en": "In 1929 she developed a collection of 20 wallpaper patterns for Salubra, bringing her designs into rooms beyond the exhibition space.",
+    "fr": "En 1929, elle a conçu une collection de vingt papiers peints pour Salubra. Ses motifs étaient aussi faits pour des pièces où l’on vivait au quotidien.",
+    "url": "https://sammlung.mak.at/de/artist/floegl-mathilde_1316",
+    "museum": "MAK"
+  },
+  {
+    "de": "38 Jahre lang unterrichtete sie Kunst an öffentlichen Schulen in Washington, D.C. Als sie 1960 in Pension ging, widmete sie sich intensiv ihrer eigenen Malerei.",
+    "en": "She taught art in Washington, D.C. public schools for 38 years. After retiring in 1960, she devoted herself to her own painting.",
+    "fr": "Elle a enseigné l’art dans les écoles publiques de Washington pendant trente-huit ans. Après sa retraite en 1960, elle s’est consacrée à sa propre peinture.",
+    "url": "https://americanart.si.edu/artist/alma-thomas-4778",
+    "museum": "Smithsonian American Art Museum"
+  },
+  {
+    "de": "Für ihren großen Zyklus „Die Gemälde zum Tempel“ schuf sie ab 1906 insgesamt 193 Bilder und Zeichnungen. Einzelne Formen gehören bei ihr oft zu einer viel größeren Reihe.",
+    "en": "Beginning in 1906, she made 193 paintings and drawings for The Paintings for the Temple. An individual shape often belongs to a much larger series.",
+    "fr": "À partir de 1906, elle a réalisé 193 peintures et dessins pour Les Peintures pour le Temple. Une forme s’inscrit souvent chez elle dans une série bien plus vaste.",
+    "url": "https://www.guggenheim-bilbao.eus/en/exhibitions/hilma-af-klint",
+    "museum": "Guggenheim Bilbao"
+  },
+  {
+    "de": "In Kyoto unterrichtete sie später „Farbe und Komposition“. 1963 gründete sie mit Isaburo Ueno ein eigenes Designinstitut und lehrte dort weiter.",
+    "en": "In Kyoto she later taught Colour and Composition. In 1963 she founded a design institute with Isaburo Ueno and continued teaching there.",
+    "fr": "À Kyoto, elle a ensuite enseigné la couleur et la composition. En 1963, elle a fondé un institut de design avec Isaburo Ueno et y a poursuivi son enseignement.",
+    "url": "https://www.mak.at/jart/prj3/mak-resp/data/uploads/MAKPressReleaseFeliceRix-Ueno_2023-11-21_1211923.pdf",
+    "museum": "MAK"
+  },
+  {
+    "de": "Sie war bei sieben der acht Ausstellungen der impressionistischen Gruppe dabei. Auch an der letzten Ausstellung 1886 war sie maßgeblich beteiligt.",
+    "en": "She took part in seven of the Impressionist group’s eight exhibitions and was a driving force behind the last one in 1886.",
+    "fr": "Elle a participé à sept des huit expositions du groupe impressionniste et a joué un rôle important dans l’organisation de la dernière, en 1886.",
+    "url": "https://www.nationalgallery.org.uk/artists/berthe-morisot",
+    "museum": "National Gallery London"
+  },
+  {
+    "de": "Ab 1927 leitete sie die Keramikproduktion der Wiener Werkstätte. Ihre Arbeit bestand also auch darin, die Herstellung und die Entwicklung neuer Formen mitzugestalten.",
+    "en": "From 1927 she led ceramic production at the Wiener Werkstätte, helping shape both the making process and the development of new forms.",
+    "fr": "À partir de 1927, elle a dirigé la production de céramique de la Wiener Werkstätte, participant aussi aux procédés de fabrication et au développement de nouvelles formes.",
+    "url": "https://www.mak.at/programm/ausstellungen/vally_wieselthier",
+    "museum": "MAK"
+  },
+  {
+    "de": "Im MAK liegt noch die Entwurfszeichnung zu ihrer Postkarte Nr. 641 von 1912: ein Mädchen mit einem Ball, gezeichnet mit Bleistift und Gouache.",
+    "en": "The MAK holds her original design for postcard no. 641 from 1912: a girl with a ball, drawn in pencil and gouache.",
+    "fr": "Le MAK conserve le dessin préparatoire de sa carte postale no 641, datée de 1912 : une fille avec un ballon, au crayon et à la gouache.",
+    "url": "https://sammlung.mak.at/de/collect/postkarte-nr-641_262696",
+    "museum": "MAK"
+  },
+  {
+    "de": "Die Technik, Draht zu Schlaufen zu legen, lernte sie 1947 von einem Kunsthandwerker in Toluca in Mexiko. Dort wurden daraus Körbe gemacht. Sie entwickelte die Technik für ihre Skulpturen weiter.",
+    "en": "In 1947 she learned to loop wire from a craftsperson in Toluca, Mexico, where the technique was used to make baskets. She developed it further for her sculptures.",
+    "fr": "En 1947, un artisan de Toluca, au Mexique, lui a appris à former des boucles de fil métallique pour fabriquer des paniers. Elle a ensuite développé cette technique pour ses sculptures.",
+    "url": "https://www.moma.org/collection/works/216304",
+    "museum": "MoMA"
+  },
+  {
+    "de": "In einem Selbstbildnis von 1907 hält sie zwei Blumen in der linken Hand. Sie schaut die Betrachtenden direkt an, statt sich als unnahbare Idealfigur darzustellen.",
+    "en": "In a 1907 self-portrait she holds two flowers in her left hand and meets the viewer’s gaze directly, rather than presenting herself as an idealised figure.",
+    "fr": "Dans un autoportrait de 1907, elle tient deux fleurs dans la main gauche et regarde directement le public, loin d’une représentation idéalisée.",
+    "url": "https://www.moma.org/momaorg/shared/flattened_pages/moma_learning/paula-modersohn-becker-self-portrait-with-two-flowers-in-her-raised-left-hand-1907-2/",
+    "museum": "MoMA"
+  },
+  {
+    "de": "Ihre ab 1960 entstandenen „Bichos“ bestehen aus beweglichen Metallflächen. Scharniere ermöglichen immer neue Stellungen; eine einzige richtige Ansicht gibt es nicht.",
+    "en": "Her Bichos, begun in 1960, are made from movable metal planes. Hinges allow new configurations, with no single correct view.",
+    "fr": "Ses Bichos, commencés en 1960, sont composés de plaques de métal mobiles. Les charnières permettent de multiples positions, sans point de vue unique.",
+    "url": "https://www.moma.org/collection/works/91764",
+    "museum": "MoMA"
+  },
+  {
+    "de": "Bei ihren „Trapunto“-Bildern bemalte, nähte und polsterte sie die Leinwand. Die Oberfläche blieb dadurch nicht flach, sondern bekam Volumen.",
+    "en": "For her trapunto paintings she painted, stitched and padded the canvas, giving its surface physical depth.",
+    "fr": "Pour ses peintures trapunto, elle peignait, cousait et rembourrait la toile. La surface prenait ainsi du volume.",
+    "url": "https://www.walkerart.org/collections/artist/pacita-abad/",
+    "museum": "Walker Art Center"
+  },
+  {
+    "de": "Für die Mappe „Mode Wien 1914/5“ entwarf und druckte sie Modebilder als Linolschnitte. Kleidung wurde bei ihr also auch zum grafischen Motiv auf Papier.",
+    "en": "For the portfolio Mode Wien 1914/5 she designed and printed fashion images as linocuts, turning clothing into graphic compositions on paper.",
+    "fr": "Pour le portfolio Mode Wien 1914/5, elle a dessiné et imprimé des images de mode en linogravure. Le vêtement devenait ainsi un motif graphique sur papier.",
+    "url": "https://sammlung.mak.at/de/collect/modebild-einer-dame-in-langem-winterkostuem-von-maria-likarz-strauss-aus-dem-mappenwerk-mode-wien-1914-5_181954",
+    "museum": "MAK"
+  },
+  {
+    "de": "Schon als Jugendliche half sie in der Teppichrestaurierung ihrer Familie. Sie zeichnete die fehlenden Teile der Motive nach, damit beschädigte Stellen ergänzt werden konnten.",
+    "en": "As a teenager she helped in her family’s tapestry restoration workshop, drawing missing parts of the images so damaged sections could be repaired.",
+    "fr": "Adolescente, elle aidait dans l’atelier familial de restauration de tapisseries. Elle dessinait les parties manquantes des motifs pour permettre leur réparation.",
+    "url": "https://lb.moma.org/about/chronology",
+    "museum": "MoMA"
+  },
+  {
+    "de": "In ihrem Selbstporträt von etwa 1937/38 tauchen eine Hyäne und ein schwebendes Schaukelpferd auf. Solche unerwarteten Nachbarn geben ihren Bildern ihre eigene Logik.",
+    "en": "Her self-portrait of around 1937–38 includes a hyena and a floating rocking horse. Unexpected companions like these give her pictures a logic of their own.",
+    "fr": "Dans son autoportrait de 1937–1938 environ, on trouve une hyène et un cheval à bascule flottant dans les airs. Ces voisinages inattendus donnent à ses images leur propre logique.",
+    "url": "https://www.metmuseum.org/art/collection/search/492697",
+    "museum": "The Met"
+  },
+  {
+    "de": "Das Tassenmodell im MAK stammt aus den Jahren 1901/02 und ist bemalt. Es macht sichtbar, dass auch einem Alltagsgegenstand ein sorgfältig ausgearbeiteter Entwurf vorausgeht.",
+    "en": "The painted cup model in the MAK dates from 1901–02. It shows how carefully even an everyday object could be developed before production.",
+    "fr": "Le modèle de tasse peint conservé au MAK date de 1901–1902. Il rappelle qu’un objet du quotidien peut lui aussi être précédé d’un dessin et d’une mise au point soignés.",
+    "url": "https://sammlung.mak.at/en/collect/tasse-mit-untertasse_6318",
+    "museum": "MAK"
+  },
+  {
+    "de": "Sie entwickelte die Küche 1926 für den Wohnbau des „Neuen Frankfurt“. Dabei ging es auch darum, Wohnraum praktisch und zu leistbaren Kosten einzurichten.",
+    "en": "She developed the kitchen in 1926 for the New Frankfurt housing programme, aiming to make practical, well-planned interiors affordable.",
+    "fr": "Elle a conçu cette cuisine en 1926 pour le programme de logements du Nouveau Francfort, avec l’idée d’aménager des intérieurs pratiques à un coût abordable.",
+    "url": "https://blog.mak.at/zum-100-geburtstag-der-frankfurter-kueche/",
+    "museum": "MAK"
+  },
+  {
+    "de": "Sie gestaltete auch Wandmalereien für die Textilabteilung der Wiener Werkstätte in der Kärntner Straße 32. Ihre Arbeit war dort Teil des Raums, in dem Stoffe gezeigt wurden.",
+    "en": "She also made wall paintings for the Wiener Werkstätte’s textile department at Kärntner Straße 32, bringing her work into the room where fabrics were displayed.",
+    "fr": "Elle a aussi réalisé des peintures murales pour le département textile de la Wiener Werkstätte, au 32 Kärntner Straße. Son travail faisait ainsi partie du lieu où les tissus étaient présentés.",
+    "url": "https://sammlung.mak.at/de/artist/calm-lotte_1314",
+    "museum": "MAK"
+  },
+  {
+    "de": "Von 1916 bis 1926 entwarf sie beim Ullstein Verlag auch Stickerei- und Spitzenmuster. Manche dieser gedruckten Handarbeitsvorlagen fanden später ihren Weg in ihre Collagen.",
+    "en": "From 1916 to 1926 she also designed embroidery and lace patterns for Ullstein Verlag. Some printed needlework patterns later found their way into her collages.",
+    "fr": "De 1916 à 1926, elle a aussi dessiné des modèles de broderie et de dentelle pour les éditions Ullstein. Certaines de ces pages imprimées se sont ensuite retrouvées dans ses collages.",
+    "url": "https://www.moma.org/magazine/articles/1430",
+    "museum": "MoMA"
+  },
+  {
+    "de": "Neben Blumen malte sie auch New Yorker Hochhäuser. „Ritz Tower“ von 1928 zeigt die leuchtende Stadt bei Nacht.",
+    "en": "Alongside flowers she also painted New York skyscrapers. Ritz Tower, from 1928, shows the illuminated city at night.",
+    "fr": "Elle peignait aussi les gratte-ciel de New York. Ritz Tower, daté de 1928, montre la ville illuminée la nuit.",
+    "url": "https://www.okeeffemuseum.org/news/georgia-okeeffes-dazzling-ritz-tower-joins-museums-collection/",
+    "museum": "Georgia O’Keeffe Museum"
+  },
+  {
+    "de": "Für „The Tree“ von 1964 zog sie mit Bleistift ein feines Raster auf eine fast zwei Meter breite Leinwand. Sie benutzte ein Metalllineal; trotzdem bleiben Spuren der zeichnenden Hand sichtbar.",
+    "en": "For The Tree, from 1964, she drew a fine pencil grid on a canvas almost two metres wide. She used a metal ruler, yet traces of the drawing hand remain visible.",
+    "fr": "Pour The Tree, en 1964, elle a tracé au crayon une grille fine sur une toile de presque deux mètres de large. Malgré l’usage d’une règle métallique, la main reste perceptible.",
+    "url": "https://www.moma.org/collection/works/78361",
+    "museum": "MoMA"
+  },
+  {
+    "de": "An ihrem Tarotgarten in der Toskana arbeitete sie über 20 Jahre. 1998 wurde der Garten mit seinen 22 großen Skulpturen für das Publikum geöffnet.",
+    "en": "She worked on her Tarot Garden in Tuscany for over 20 years. Its 22 monumental sculptures opened to the public in 1998.",
+    "fr": "Elle a travaillé plus de vingt ans à son Jardin des Tarots en Toscane. Le jardin et ses vingt-deux sculptures monumentales ont ouvert au public en 1998.",
+    "url": "https://www.moma.org/artists/1444-niki-de-saint-phalle",
+    "museum": "MoMA"
+  }
+];
