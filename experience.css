@@ -60,3 +60,5 @@ body[data-view="home"] .masthead{padding:10px 0}.experience-cover{padding:8px 3%
 
 .intro{position:relative;display:block;text-align:center;padding:4px 100px 9px}.intro>div:first-child{display:block}.intro h1{font-size:clamp(27px,3.1vw,44px);letter-spacing:-.025em}.intro .subtitle{font-size:12px;max-width:none;margin:6px 0 0;line-height:1.4}.cover-controls{position:absolute;right:0;top:12px;display:block;margin:0}.cover-controls button{font-size:10px}.calendar-meta{font-size:10px}
 @media(max-width:650px){.intro{padding:5px 3% 8px}.intro h1{font-size:clamp(25px,7.1vw,36px)}.intro .subtitle{font-size:11px;margin-top:5px}.cover-controls{position:static;margin-top:3px}.cover-controls button{min-height:24px;padding:3px 0}.calendar-meta{font-size:9px}}
+
+.snowfall{opacity:.9}@media(prefers-reduced-motion:reduce){.snowfall{opacity:.4}}
