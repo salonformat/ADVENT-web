@@ -41,7 +41,16 @@ let roofline=ip([[21,229],[247,231],[489,229],[739,232],[1080,229]],2,2.5)+ip([[
 let details=ip([[203,102],[310,101],[391,105]],3)+ip([[710,105],[816,104],[898,106]],6)+ip([[440,94],[441,175],[658,177],[660,94]],8)+ip([[453,93],[487,62],[616,64],[646,94]],6)+ip([[489,64],[490,174]],4)+ip([[613,65],[615,175]],4);
 let lights='';for(let i=0;i<11;i++){let x=66+i*96,y=201+Math.sin(i/10*Math.PI)*10;lights+=`<circle cx="${x}" cy="${y}" r="3.3" fill="#dfb856"/>`;}
 return`<svg class="roof" viewBox="0 0 1100 255" aria-hidden="true"><path fill="#b68c9d" d="${ink(outer,2)}L1081 247 17 246Z"/><path fill="#725b78" d="M203 111L430 62 489 65 441 177 203 177Z M614 65L692 67 898 113 896 177 658 178Z"/>${outline}${details}${ip([[58,170],[103,168],[141,108],[200,106]],44,5).replace('stroke="#242827"','stroke="#f4f7f3"')}${ip([[899,108],[957,112],[994,172],[1044,172]],45,4).replace('stroke="#242827"','stroke="#f4f7f3"')}${roofline}${ip([[58,194],[253,205],[452,212],[650,213],[852,205],[1040,195]],4,1.3)}${lights}</svg>`;}
-function windowInk(seed){const arch=seed%3===0;let rails='';for(let i=0;i<6;i++){const x=29+i*20;rails+=`<path d="M${x} 145v17m-5-6q-5-10 0-12q8 0 7 9q-2 7-6 2" fill="none" stroke="#263e36" stroke-width=".8"/>`;}return`<svg class="window-frame" viewBox="0 0 160 180" aria-hidden="true">${ip(arch?[[19,36],[27,20],[52,7],[82,4],[110,12],[141,34],[141,147],[21,149],[19,36]]:[[19,25],[52,6],[107,8],[141,26],[141,147],[21,149],[19,25]],seed,1.7)}${ip([[25,30],[26,141],[135,141],[134,29]],seed+2,.9)}${ip([[17,28],[18,141]],seed+11,.7)}${ip([[12,149],[82,146],[150,149],[149,164],[13,166],[12,149]],seed+1,1.4)}${rails}${ip([[15,144],[80,142],[145,144]],seed+5,1.5)}${ip([[18,23],[49,2],[111,4],[146,25]],seed+3,.8)}${ip([[13,168],[78,166],[149,168]],seed+1,.8)}</svg>`;}
+function windowInk(seed){const kind=seed%6;let crown=[[[17,29],[28,14],[81,2],[135,18],[145,31]],[[17,28],[42,12],[118,13],[145,29]],[[17,31],[18,14],[141,12],[145,31]],[[17,30],[40,6],[120,8],[145,30]],[[17,30],[48,19],[78,4],[110,18],[145,30]],[[17,31],[27,9],[134,7],[145,31]]][kind];let ornament='';
+if(kind===0)ornament='<path d="M53 17q27-14 54 0M74 11l6 9 7-10" fill="none" stroke="#32483d" stroke-width="1"/>';
+if(kind===1)ornament=ip([[33,18],[36,23],[124,23],[129,18]],seed,.9);
+if(kind===2)ornament='<path d="M60 18h40m-33 5h26" fill="none" stroke="#32483d" stroke-width="1"/>';
+if(kind===3)ornament='<path d="M71 15q9-13 18 0q-9 12-18 0" fill="none" stroke="#32483d" stroke-width="1"/>';
+if(kind===4)ornament=ip([[68,19],[79,9],[92,19],[79,24],[68,19]],seed,.9);
+if(kind===5)ornament='<path d="M31 18h12m74-1h14M46 14l4 7m61-8l-4 8" stroke="#32483d" stroke-width="1"/>';
+let rails='';for(let i=0;i<5;i++){let x=32+i*24;rails+=kind%2?`<path d="M${x} 145v18m-7-9q7-13 14 0q-7 12-14 0" fill="none" stroke="#263e36" stroke-width=".85"/>`:`<path d="M${x} 145v18m-6-4l6-12 6 12" fill="none" stroke="#263e36" stroke-width=".85"/>`;}
+const details=seed%4===0?'<path d="M25 143l4-12 17 1 3 11Z" fill="#a16665"/><path d="M34 132q-12-17-8-18q12 1 10 16q3-18 10-17q3 9-10 18" fill="#465e48"/>':seed%4===1?'<path d="M108 144l2-14h14l2 14Z" fill="#d1ae71"/><path d="M113 130l1-11h7l1 11" fill="none" stroke="#46544a" stroke-width="1"/>':seed%4===2?ip([[30,139],[53,139],[56,135]],seed,.9):'<path d="M97 143l4-6 18 2 1 5Z" fill="#b3919f"/>';
+return `<svg class="window-frame" viewBox="0 0 160 180" preserveAspectRatio="none" aria-hidden="true">${ip(crown,seed,1.7)}${ornament}${ip([[20,30],[21,147],[141,146],[140,30]],seed+1,1.7)}${ip([[25,32],[26,140],[135,140],[134,32]],seed+2,.75)}${ip([[15,37],[15,141]],seed+11,.65)}${ip([[12,149],[82,146],[150,149],[149,164],[13,166],[12,149]],seed+1,1.4)}${rails}${details}${ip([[15,144],[80,142],[145,144]],seed+5,1.5)}${ip([[10,169],[78,166],[151,168]],seed+1,.8)}${seed%3===0?ip([[146,66],[152,70],[149,84]],seed,.6):''}</svg>`;}
 
 function houseEntrance(){return `<svg class="house-entrance" viewBox="0 0 600 70" aria-hidden="true"><path d="M251 69V24Q300-11 349 24V69" fill="#294c47"/>${ip([[251,69],[251,24],[277,7],[321,7],[349,24],[349,69]],51,1.5)}${ip([[300,13],[299,67]],55,1)}<path d="M267 26h21v22h-21Z M312 26h21v22h-21Z" fill="#e8be78"/>${ip([[12,62],[203,62],[207,53],[391,53],[395,62],[588,62]],54,1.4)}<path d="M25 61L25 34M19 34h12l-2-19h-8Z M575 61V34M569 34h12l-2-19h-8Z" fill="#e8be78" stroke="#242827" stroke-width="1.2"/></svg>`;}
 
@@ -50,4 +59,60 @@ function facadeStars(){return [false,true].map((right,i)=>`<svg class="facade-st
 function facadeWash(panel){const strokes=[[[8,-5],[57,0],[70,41],[66,119],[110,121],[109,244],[89,246],[84,354],[16,359],[13,230],[0,221]],[[27,-5],[146,0],[140,78],[152,81],[150,193],[111,192],[115,257],[34,252],[31,144],[20,141]],[[50,169],[155,163],[160,360],[10,361],[11,282],[47,284]]];const col=['#dfadb9','#343fb4','#964454'][panel];return `<svg class="facade-wash" viewBox="0 0 160 360" preserveAspectRatio="none" aria-hidden="true"><path d="${ink(strokes[panel],panel+71)}Z" fill="${col}"/>${ip(strokes[panel],panel+19,2).replace('stroke="#242827"',`stroke="${col}"`)}${[0,1,2,3].map((n)=>ip([[1,80+n*87],[52,81+n*87],[115,79+n*87],[159,80+n*87]],n+panel+70,.65)).join('')}</svg>`;}
 
 function mobileFacadeWash(){const fields=[['#dfadb9',[[0,0],[89,0],[93,102],[130,105],[125,282],[85,287],[86,397],[5,390]]],['#343fb4',[[204,0],[303,0],[305,121],[287,126],[296,234],[246,239],[248,324],[187,318],[194,146],[206,142]]],['#964454',[[102,373],[172,370],[177,306],[263,302],[262,396],[398,388],[400,600],[94,600],[98,479],[113,475]]]];return `<svg class="mobile-facade-wash" viewBox="0 0 400 600" preserveAspectRatio="none" aria-hidden="true">${fields.map(([col,points],i)=>`<path d="${ink(points,91+i)}Z" fill="${col}"/>`).join('')}</svg>`;}
-function atelierInterior(day){const wall=['#d8e1d4','#dde0d9','#d5ded8'][day%3],side=['#a9bdb1','#b9b3c1','#b8c0ac'][day%3];return `<svg class="atelier-ceiling" viewBox="0 0 1200 65" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0L55 65 1145 65 1200 0Z" fill="#c1cdbd"/>${ip([[0,0],[55,64],[1145,64],[1200,0]],144,1)}</svg><svg class="atelier-interior" viewBox="0 0 1200 720" preserveAspectRatio="none" aria-hidden="true"><path d="M55 0L1145 0 1145 720 55 720Z" fill="${wall}"/><path d="M0 0L55 0 55 720 0 720Z M1145 0L1200 0 1200 720 1145 720Z" fill="${side}"/>${ip([[55,0],[55,720]],145,1.1)}${ip([[1145,0],[1145,720]],146,1.1)}</svg><svg class="atelier-floor" viewBox="0 0 1200 130" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1200V130H0Z" fill="${side}"/><path d="M55 0L1145 0 1200 130 0 130Z" fill="#cba9a7"/>${ip([[55,0],[700,2],[1145,0]],147,1.2)}${ip([[55,0],[0,130]],148,1)}${ip([[1145,0],[1200,130]],149,1)}${[0,1,2,3,4,5].map(i=>ip([[160+i*174,0],[70+i*207,130]],i+150,.5)).join('')}</svg>`;}
+
+// Room palettes and marginal material studies are original set design, not reconstructions.
+const ROOM_THEMES=[
+['#e6e5d7','#9d9c8e','#cfb6a6','#9b3e48','geometry'],
+['#dce5e7','#334e69','#a5b5bb','#294b81','botanical'],
+['#eee0d5','#b26e7f','#d1b5aa','#7541a2','colour'],
+['#e2e6d9','#8caa94','#c0baa1','#3b6356','print'],
+['#eee5d3','#b0a074','#caaf91','#a0413f','mosaic'],
+['#e4deeb','#9183a5','#b9adb8','#6d4c86','orbit'],
+['#eee2d8','#b39b9d','#c9b29d','#9c4546','garden'],
+['#e8e9db','#a5b7ab','#c4b9a5','#47675e','light'],
+['#eeded6','#b68780','#c8a098','#974b56','clay'],
+['#eee6d4','#b4aa89','#d0bca1','#716040','paper'],
+['#e3e4db','#939b8e','#bdb5a5','#4d6757','wire'],
+['#e9e0cf','#afa088','#c8b097','#775748','charcoal'],
+['#dce3df','#7f9b92','#b4b4a6','#3d665d','fold'],
+['#ecdeda','#aa8094','#c9a6a0','#923c59','stitch'],
+['#e6e3d2','#a49d7a','#c3b293','#526949','costume'],
+['#e6d9dd','#9b7983','#bca0a6','#88445b','house'],
+['#e5dfcf','#9ba48b','#b8aa8e','#596444','alchemy'],
+['#e8e9de','#9fa79b','#bfbbab','#536c62','porcelain'],
+['#dee6e3','#82a49a','#b3b7a6','#3b6c60','plan'],
+['#e6e1d8','#aba095','#b7a792','#5f6555','interior'],
+['#e4dfe4','#978998','#baaaae','#80536d','collage'],
+['#e8dfd9','#b59b9d','#c2a597','#824656','petal'],
+['#e9e7dd','#b1b4a7','#c8c3b3','#596153','line'],
+['#e4e3d7','#8eaaa0','#bea794','#824465','sculpture']
+];
+function roomTheme(day){const [wall,side,floor,accent,material]=ROOM_THEMES[day-1];return{wall,side,floor,accent,material};}
+function roomMaterial(day){let b='';const a=roomTheme(day).accent;switch(day){
+case 1:for(let i=0;i<7;i++)b+=`<path d="M7 ${10+i*31}h22v20H7Z" fill="${i%2?a:'none'}" stroke="${a}" stroke-width=".8"/>`;break;
+case 2:case 7:for(let i=0;i<5;i++)b+=`<path d="M18 ${35+i*43}q-20-17-11-24q14 2 11 24q19-21 19-11q-1 10-19 11m0-3v13" fill="none" stroke="${a}" stroke-width="1.2"/>`;break;
+case 3:for(let i=0;i<5;i++)b+=`<circle cx="20" cy="${28+i*45}" r="${12+i%2*4}" fill="none" stroke="${a}" stroke-width="3"/>`;break;
+case 4:for(let i=0;i<8;i++)b+=ip([[4,15+i*29],[19,6+i*29],[34,16+i*29],[20,25+i*29],[4,15+i*29]],i,.7);break;
+case 5:for(let i=0;i<12;i++)b+=`<path d="M${i%2*18+3} ${10+i*19}l13 2-1 12-13-1Z" fill="${i%3?a:'#be9966'}"/>`;break;
+case 6:for(let i=0;i<4;i++)b+=`<ellipse cx="20" cy="${35+i*57}" rx="15" ry="24" fill="none" stroke="${a}" stroke-width=".8"/><path d="M4 ${35+i*57}h32" stroke="${a}" stroke-width=".5"/>`;break;
+case 8:b=`<path d="M7 10L30 80 11 245 34 200" fill="#e8cd92" opacity=".6"/>`;break;
+case 9:for(let i=0;i<3;i++)b+=`<path d="M11 ${15+i*80}q12-8 18 0l-3 17q18 34-7 38q-21-3-11-25l6-13Z" fill="none" stroke="${a}" stroke-width="1.1"/>`;break;
+case 10:for(let i=0;i<5;i++)b+=ip([[5,12+i*47],[34,12+i*47],[34,45+i*47],[5,45+i*47],[5,12+i*47]],i,.8);break;
+case 11:for(let i=0;i<5;i++)b+=`<path d="M20 5C${-30+i*8} 70 ${-30+i*8} 180 20 250C${70-i*8} 170 ${70-i*8} 80 20 5Z" fill="none" stroke="${a}" stroke-width=".7"/>`;break;
+case 12:for(let i=0;i<11;i++)b+=ip([[8,10+i*22],[29,14+i*22]],i,1.2);break;
+case 13:for(let i=0;i<5;i++)b+=`<path d="M5 ${15+i*47}l15-9 15 12-15 20Z" fill="${i%2?a:'none'}" stroke="${a}" stroke-width=".7"/>`;break;
+case 14:for(let i=0;i<13;i++)b+=`<path d="M7 ${10+i*18}l24 9m-24 0 24-9" stroke="${a}" stroke-width=".8"/>`;break;
+case 15:for(let i=0;i<4;i++)b+=`<path d="M18 ${8+i*60}l-12 14 8 7-10 22h31l-10-22 8-7Z" fill="none" stroke="${a}" stroke-width="1"/>`;break;
+case 16:for(let i=0;i<4;i++)b+=`<path d="M4 ${35+i*60}l16-22 16 22v24H4Z M17 ${59+i*60}v-18h8v18" fill="none" stroke="${a}" stroke-width=".8"/>`;break;
+case 17:b=`<path d="M20 8v230m-12-15 24-11M6 34q14-33 28 0L27 55H12Z M5 141q15-27 30 0l-8 18H13Z" fill="none" stroke="${a}" stroke-width="1"/>`;break;
+case 18:for(let i=0;i<4;i++)b+=`<path d="M6 ${14+i*58}h23l-3 25H10Z M29 ${17+i*58}q15-2 6 15h-7M3 ${44+i*58}h32" fill="none" stroke="${a}" stroke-width="1"/>`;break;
+case 19:for(let i=0;i<5;i++)b+=`<path d="M5 ${10+i*46}h29v34H5Z m10 0v-22h19m-29-4h12" fill="none" stroke="${a}" stroke-width=".8"/>`;break;
+case 20:b=`<path d="M5 10h30v230H5Z M5 70h30M5 130h30M5 190h30M20 10v230" fill="none" stroke="${a}" stroke-width=".8"/>`;break;
+case 21:for(let i=0;i<6;i++)b+=`<path d="M${i%2?7:3} ${10+i*39}l28-5-3 28-26 4Z" fill="${i%2?a:'#c5b295'}" opacity=".7"/>`;break;
+case 22:for(let i=0;i<4;i++)b+=`<path d="M20 ${15+i*60}q-30 8 0 39q31-29 0-39Z M20 ${15+i*60}v39" fill="none" stroke="${a}" stroke-width="1"/>`;break;
+case 23:for(let i=0;i<22;i++)b+=ip([[4,10+i*11],[34,11+i*11]],i,.5);break;
+case 24:for(let i=0;i<3;i++)b+=`<path d="M4 ${72+i*80}v-42q15-32 32 0v42h-9V33q-7-14-14 0v39Z" fill="${a}" opacity=".7"/>`;break;
+}return `<svg class="room-material material-${roomTheme(day).material}" viewBox="0 0 40 260" preserveAspectRatio="xMidYMid meet" aria-hidden="true">${b}</svg>`;}
+function atelierInterior(day){const {wall,side,floor}=roomTheme(day);return `<svg class="atelier-ceiling" viewBox="0 0 1200 65" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0L55 65 1145 65 1200 0Z" fill="${side}"/>${ip([[0,0],[55,64],[1145,64],[1200,0]],144,1)}</svg><svg class="atelier-interior" viewBox="0 0 1200 720" preserveAspectRatio="none" aria-hidden="true"><path d="M55 0L1145 0 1145 720 55 720Z" fill="${wall}"/><path d="M0 0L55 0 55 720 0 720Z M1145 0L1200 0 1200 720 1145 720Z" fill="${side}"/>${ip([[55,0],[55,720]],145,1.1)}${ip([[1145,0],[1145,720]],146,1.1)}</svg>${roomMaterial(day)}<svg class="atelier-floor" viewBox="0 0 1200 130" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1200V130H0Z" fill="${side}"/><path d="M55 0L1145 0 1200 130 0 130Z" fill="${floor}"/>${ip([[55,0],[700,2],[1145,0]],147,1.2)}${ip([[55,0],[0,130]],148,1)}${ip([[1145,0],[1200,130]],149,1)}${roomFloorLines(day)}</svg>`;}
+
+function roomFloorLines(day){let b='';const kind=day%4;for(let i=0;i<7;i++)b+=ip([[85+i*171,0],[i*200-10,130]],i+day,.55);if(kind===0||kind===1)for(let i=1;i<4;i++)b+=ip([[45-i*13,i*i*8],[1155+i*13,i*i*8]],day+i,.5);if(kind===2)for(let i=0;i<8;i++)b+=ip([[90+i*140,30+i%3*22],[104+i*140,35+i%3*22]],i+day,.65);if(kind===3)b+=ip([[6,108],[300,105],[600,109],[900,106],[1194,109]],day,.6);return b;}
