@@ -99,3 +99,8 @@ body{background:#30435b;color:var(--night-text)}.experience-cover:before{backgro
 
 /* A lit room has one uninterrupted pane and one pair of slightly open shutters. */
 .night-house .door[data-day="5"]:not(.opened) .shutter,.night-house .door[data-day="9"]:not(.opened) .shutter,.night-house .door[data-day="17"]:not(.opened) .shutter{width:14%;opacity:1}.night-house .shutter{opacity:1}
+
+/* Closed shutters: a thin warm seam, never a visible yellow pane. */
+.night-house .door[data-day="5"]:not(.opened) .shutter,.night-house .door[data-day="9"]:not(.opened) .shutter,.night-house .door[data-day="17"]:not(.opened) .shutter{width:51%;opacity:1}.night-house .shutter-left{left:-.5%}.night-house .shutter-right{right:-.5%}
+
+.scene-stage .snowfall{opacity:1}.sky-ornaments{opacity:.85}
