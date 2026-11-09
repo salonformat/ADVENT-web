@@ -1,3 +1,4 @@
+// Salon Format editorial copy. Museum sources were checked 8–9 November 2026.
 const MAK_WOMEN='https://www.mak.at/programm/ausstellungen/die_frauen_der_wiener_werkstaette';
 const REPLACEMENTS={
 4:['Mathilde Flögl','1893–1958','https://sammlung.mak.at/de/artist/floegl-mathilde_1316','collection'],
@@ -9,125 +10,660 @@ const REPLACEMENTS={
 19:['Margarete Schütte-Lihotzky','1897–2000','https://sammlung.mak.at/de/collect/frankfurter-kueche_186280','collection'],
 20:['Lotte Calm','1897–1974','https://sammlung.mak.at/de/artist/calm-lotte_1314','collection']};
 Object.entries(REPLACEMENTS).forEach(([d,[name,years,source,mak]])=>ARTISTS[d-1]={...ARTISTS[d-1],name,years,source,sourceName:'MAK',mak});
-const ARTIST_COPY={de:[
-'Formen, die zusammenpassen|Sophie Taeuber-Arp gestaltete Teppiche, Marionetten, Möbel und ganze Räume. Sie tanzte auch. Kreise, Linien und Rechtecke tauchen in vielen ihrer Arbeiten auf – auf einer Tasche genauso wie in einem Bild.|Tippe die Formen an und drehe sie. Such einen Rhythmus, der dir gefällt. Lass dann eine Form bewusst aus der Reihe tanzen.|Formen und Rhythmus',
-'Fotografieren ohne Kamera|Anna Atkins war Botanikerin und Fotografin. Sie legte Algen auf lichtempfindliches Papier. Nach der Belichtung blieben helle Pflanzenformen auf blauem Grund zurück. Mit diesen Cyanotypien machte sie ein Buch über Algen.|Lege drei Blätter auf das Papier. Drücke dann auf „Belichten“. Wo die Blätter lagen, bleibt das Papier hell.|Blätter auf blauem Papier',
-'Dasselbe Rosa, ganz anders|Sonia Delaunay malte und entwarf Stoffe, Kleider und Dinge für ihr Zuhause. Sie beschäftigte sich damit, wie Farben nebeneinander wirken. Ihre Farbideen blieben nicht auf der Leinwand.|Wechsle die Farbe um das Rosa herum. Das Rosa selbst bleibt gleich. Auf welchem Hintergrund wirkt es für dich am hellsten?|Farbige Kreise und Stoffstreifen',
-'Ein Muster für die ganze Wand|Mathilde Flögl arbeitete für die Wiener Werkstätte. Sie entwarf unter anderem Tapeten, Textilien und Buchgrafik. Eine Wand war für sie eine Fläche, auf der man mit Mustern einen ganzen Raum verändern konnte.|Verändere den Abstand zwischen den Motiven. Probier dann eine versetzte Anordnung. Welche Tapete würdest du zu Hause haben wollen?|Ein Tapetenentwurf',
-'Platz zwischen den Farben|Alma Thomas war Lehrerin und Malerin. Ihre abstrakten Bilder entwickelte sie besonders in ihren späteren Lebensjahren. Viele kleine Farbstriche ergeben zusammen bewegte Flächen. Dazwischen bleibt oft der helle Grund sichtbar.|Verändere die Lücken zwischen den Farbstrichen. Wann wirkt die Fläche ruhig, wann bewegt? Wähle deinen Lieblingsabstand.|Farbstriche mit Zwischenräumen',
-'Wie sieht ein Gefühl aus?|Hilma af Klint suchte Bilder für Dinge, die man nicht einfach anschauen kann: Gedanken, Gefühle und spirituelle Vorstellungen. Schon zu Beginn des 20. Jahrhunderts arbeitete sie mit abstrakten Formen und Farben.|Wähle eine Farbe und eine Form für deine heutige Stimmung. Gib dem kleinen Bild einen Namen, ohne das Gefühl direkt zu nennen.|Ein Notizbuch mit Zeichen',
-'Ein kleines Motiv geht auf Reisen|Felice Rix-Ueno entwarf Stoffe, Tapeten, Stickereien und vieles mehr für die Wiener Werkstätte. Später lebte und lehrte sie in Japan. Ihre Entwürfe sind voller kleiner, fantasievoller Motive.|Wähle Stern, Feder oder Quaste. Setze dein Motiv an drei Stellen auf die Fläche. Du kannst mit Maus, Finger oder Tastatur arbeiten.|Stern, Feder und Quaste',
-'Was ist dir aufgefallen?|Berthe Morisot gehörte zum Kreis des Impressionismus. Sie malte Menschen und alltägliche Situationen. Ihre Bilder lenken den Blick auch auf kurze Momente und kleine Veränderungen im Licht.|Schau dir die gezeichnete Zimmerecke an. Blende sie dann aus und beantworte die Frage aus dem Gedächtnis.|Ein Fenster und das Licht im Zimmer',
-'Eine Vase mit Charakter|Vally Wieselthier war Keramikerin. Sie arbeitete für die Wiener Werkstätte und später in den USA. Ihre Keramik zeigt, dass ein Gefäß mehr sein kann als ein praktischer Behälter.|Verändere Bauch und Öffnung der Vase. Sie muss nicht symmetrisch sein. Welche Form würdest du gern in die Hand nehmen?|Eine frei gezeichnete Vase',
-'Eine Karte für jemanden|Mela Koehler gestaltete unter anderem Postkarten für die Wiener Werkstätte. Eine kleine Karte kann Bild, Schrift und einen persönlichen Gruß zusammenbringen.|Schreibe einen kurzen Gruß. Wähle dazu einen gezeichneten Rand. Die Karte kannst du herunterladen.|Eine illustrierte Postkarte',
-'Eine Linie im Raum|Ruth Asawa formte durchlässige Skulpturen aus Draht. Man kann durch sie hindurchsehen. Zwischen den Linien gehört auch die Luft zur Form.|Verändere die Anzahl der Drahtschlaufen. Achte darauf, wie sich die offenen Zwischenräume verändern.|Ein Körper aus Drahtschlaufen',
-'Ein Selbstporträt ohne Spiegel|Paula Modersohn-Becker malte viele Frauen, Mädchen und Selbstbildnisse. Sie suchte einen eigenen Blick auf Menschen und folgte dabei nicht einfach dem damaligen Schönheitsideal.|Ergänze die drei Satzanfänge. Lass Beruf und Aussehen weg. Was erzählt sonst noch etwas über dich?|Ein Spiegel mit einem leeren Blatt',
-'Eine Form zum Aufklappen|Lygia Clark wollte, dass Menschen Kunst selbst erfahren und verändern. Ihre beweglichen Arbeiten stellen die Frage, was zwischen einem Objekt und der Person passiert, die damit umgeht.|Klappe die verbundenen Flächen auf und zu. Schau seitlich und von oben darauf. Welche Stellung überrascht dich?|Miteinander verbundene Flächen',
-'Mit einem Faden verbinden|Pacita Abad lebte an vielen Orten. Ihre farbigen Arbeiten verbinden oft Malerei mit textilen Materialien. Reisen und Begegnungen spielen in ihrem Werk eine wichtige Rolle.|Verbinde die farbigen Stoffstücke mit Stichen. Tippe auf die kleinen Verbindungen. Lass mindestens eine Naht offen.|Ein genähtes Stoffstück',
-'Ein Kostüm, das auffällt|Maria Likarz-Strauss entwarf Stoffe, Gebrauchsgrafik und Mode für die Wiener Werkstätte. Zu ihren Arbeiten gehören auch Entwürfe für Faschingskostüme.|Kombiniere eine Kopfform, ein Oberteil und einen Rock zu einem Papierkostüm. Würdest du so auf ein Fest gehen?|Ein Papierkostüm',
-'Ein Raum aus der Erinnerung|Louise Bourgeois arbeitete mit Zeichnung, Skulptur und Druckgrafik. Erinnerungen und persönliche Beziehungen tauchen immer wieder in ihrer Arbeit auf.|Tippe die Felder an und baue den Grundriss eines vertrauten Raums. Wo würdest du eine Tür offen lassen?|Ein Haus und ein Faden',
-'Eine ziemlich seltsame Geschichte|Leonora Carrington war Malerin und Schriftstellerin. In ihren surrealistischen Welten treffen vertraute Dinge auf Wesen und Situationen, die es im Alltag nicht gibt.|Wähle drei Teile für den Anfang einer Geschichte. Nimm die ungewöhnlichste Kombination. Du musst sie nicht erklären.|Eine Teekanne auf Reisen',
-'Aus welcher Tasse trinkst du?|Jutta Sika gestaltete unter anderem Geschirr und grafische Arbeiten. Im MAK gibt es ein Modell einer Tasse mit Untertasse nach ihrem Entwurf. Form und Benutzung gehören hier zusammen.|Setze den Henkel nach links oder rechts und ändere seine Größe. Denk daran, wie du die Tasse tatsächlich halten würdest.|Tasse und Untertasse',
-'Kurze Wege in der Küche|Margarete Schütte-Lihotzky entwarf die Frankfurter Küche. Sie dachte darüber nach, wie man auf wenig Platz arbeiten kann. Im MAK steht ein Nachbau, der mit ihr gemeinsam entstand.|Ordne Vorrat, Spüle, Arbeitsfläche und Herd neu. Vergleiche den Weg für „holen, waschen, schneiden, kochen“.|Eine kleine Küche von oben',
-'Ein Bild zieht in einen Raum|Lotte Calm gestaltete für die Wiener Werkstätte: Keramik, Textilien, Spielzeug und auch Wandmalereien. So konnte ein Motiv Teil eines ganzen Raums werden.|Setze den gezeichneten Zweig an die Wand, auf den Boden oder an die Decke. Wo verändert er den Raum am stärksten?|Ein Zweig als Wandgestaltung',
-'Aus Teilen wird etwas Neues|Hannah Höch gehörte zum Berliner Dada-Kreis. Mit Fotomontagen brachte sie vorhandene Bildteile in neue Zusammenhänge. Ein Ausschnitt kann neben einem anderen plötzlich etwas Neues erzählen.|Verschiebe die drei Bildstreifen gegeneinander. Such eine Kombination, die vorher nicht geplant war.|Papierausschnitte als Collage',
-'Noch ein Stück näher|Georgia O’Keeffe malte unter anderem große Blumenbilder. Durch die Vergrößerung werden kleine Formen so auffällig, dass man sie neu anschaut.|Zoome in die gezeichnete Blüte hinein. Wann siehst du keine Blume mehr, sondern nur noch Linien und Flächen?|Ein stark vergrößertes Blütendetail',
-'Acht ruhige Linien|Agnes Martin arbeitete mit Linien und geometrischen Ordnungen. Wenn man länger hinschaut, werden kleine Unterschiede in den scheinbar gleichmäßigen Flächen sichtbar.|Ziehe acht Linien. Langsam, ohne Lineal. Versuch nicht, sie perfekt zu machen. Auf Papier geht das natürlich auch.|Linien mit kleinen Unterschieden',
-'Ein Ort für alle|Niki de Saint Phalle schuf neben Skulpturen auch große, begehbare Projekte. Kunst konnte bei ihr ein Ort werden, den Menschen gemeinsam erleben.|Gestalte einen kleinen öffentlichen Platz. Füge Sitzplätze, einen stufenlosen Zugang und einen Treffpunkt hinzu. Was ist dir wichtig?|Ein farbiges Tor zu einem Platz'
-],en:[
-'Finding a rhythm|Sophie Taeuber-Arp designed rugs, puppets, furniture and entire rooms. She also danced. Circles, lines and rectangles appear throughout her work, from bags to paintings.|Tap the shapes to turn them. Find a rhythm you like, then let one shape break the pattern.|Shapes and rhythm',
-'A photograph without a camera|Anna Atkins was a botanist and photographer. She placed algae on light-sensitive paper. After exposure, pale plant shapes remained against blue. She used these cyanotypes to make a book about algae.|Place three leaves on the paper, then press “Expose”. The paper stays pale where the leaves covered it.|Leaves on blue paper',
-'The same pink, a different feeling|Sonia Delaunay painted and designed textiles, clothes and things for her home. She explored how colours affect each other. Her ideas about colour went far beyond the canvas.|Change the colour around the pink. The pink itself stays the same. Which background makes it look brightest to you?|Coloured circles and fabric strips',
-'A pattern for a whole wall|Mathilde Flögl worked for the Wiener Werkstätte. She designed wallpaper, textiles and book graphics. A wall offered room to change the feeling of an entire space through pattern.|Change the distance between the motifs, then try staggered rows. Which wallpaper would you choose for your own home?|A wallpaper sketch',
-'Space between colours|Alma Thomas was a teacher and painter. She developed her abstract paintings especially later in life. Small colour marks make lively fields, often with pale spaces between them.|Change the gaps between the colour marks. When does the surface feel calm or lively? Choose your favourite spacing.|Colour marks with gaps',
-'What does a feeling look like?|Hilma af Klint looked for images for things we cannot simply see: thoughts, feelings and spiritual ideas. She was already working with abstract forms and colours in the early twentieth century.|Choose a colour and a shape for your mood today. Name your little picture without naming the feeling itself.|A notebook of signs',
-'A small motif travels|Felice Rix-Ueno designed fabrics, wallpaper, embroidery and more for the Wiener Werkstätte. She later lived and taught in Japan. Her designs are full of small, imaginative motifs.|Choose a star, feather or tassel. Place it in three spots. You can use a mouse, your finger or the keyboard.|A star, feather and tassel',
-'What caught your eye?|Berthe Morisot was part of the Impressionist circle. She painted people and everyday scenes, drawing attention to brief moments and small changes in light.|Look at the drawn corner of a room. Hide it, then answer the question from memory.|A window and the light in a room',
-'A vase with character|Vally Wieselthier was a ceramicist. She worked for the Wiener Werkstätte and later in the United States. Her ceramics show that a vessel can be more than a practical container.|Change the body and opening of the vase. It does not have to be symmetrical. Which shape would you like to hold?|A freely drawn vase',
-'A card for someone|Mela Koehler designed postcards for the Wiener Werkstätte, among other things. A small card can bring together a picture, lettering and a personal message.|Write a short greeting and choose a drawn border. You can save and download your card.|An illustrated postcard',
-'A line in space|Ruth Asawa made open sculptures from wire. You can see through them. The air between the lines is part of the form too.|Change the number of wire loops. Watch how the spaces between them change.|A form made of wire loops',
-'A self-portrait without a mirror|Paula Modersohn-Becker painted many women, girls and self-portraits. She looked for her own way of seeing people rather than following the beauty ideals of her time.|Finish the three sentences. Leave out your job and your appearance. What else tells us something about you?|A mirror and a blank page',
-'A form you can unfold|Lygia Clark wanted people to experience and change art themselves. Her movable works explore what happens between an object and the person handling it.|Open and close the connected panels. Look from the side and from above. Which position surprises you?|Connected folding panels',
-'Joining things with thread|Pacita Abad lived in many places. Her colourful work often brings painting together with textile materials. Travel and encounters are an important part of her art.|Join the coloured patches with stitches. Tap the small connections. Leave at least one seam open.|A stitched piece of fabric',
-'A costume that stands out|Maria Likarz-Strauss designed fabrics, graphics and fashion for the Wiener Werkstätte. Her work also includes carnival costume designs.|Choose a headpiece, top and skirt for a paper costume. Would you wear it to a party?|A paper costume',
-'A room you remember|Louise Bourgeois worked with drawing, sculpture and printmaking. Memories and personal relationships appear again and again in her work.|Tap the squares to build the plan of a familiar room. Where would you leave a door open?|A house and a thread',
-'A rather strange story|Leonora Carrington was a painter and writer. In her surreal worlds, familiar things meet creatures and situations that do not exist in everyday life.|Choose three parts for the start of a story. Pick the strangest combination. You do not have to explain it.|A travelling teapot',
-'Which cup would you use?|Jutta Sika designed tableware and graphic work, among other things. The MAK holds a model of a cup and saucer based on her design. Form and use go together here.|Move the handle to the left or right and change its size. Think about how you would actually hold the cup.|A cup and saucer',
-'Shorter journeys in the kitchen|Margarete Schütte-Lihotzky designed the Frankfurt Kitchen. She thought about working in a small space. The MAK holds a reconstruction developed with her involvement.|Rearrange the pantry, sink, worktop and cooker. Compare the route for collecting, washing, chopping and cooking.|A small kitchen seen from above',
-'A picture moves into a room|Lotte Calm designed ceramics, textiles, toys and murals for the Wiener Werkstätte. A motif could become part of an entire room.|Place the drawn branch on the wall, floor or ceiling. Where does it change the room most?|A branch as a wall decoration',
-'Making something new from pieces|Hannah Höch was part of the Berlin Dada circle. Her photomontages put existing pictures into new relationships. One fragment can tell a different story beside another.|Slide the three picture strips past each other. Find a combination you did not plan.|Paper fragments in a collage',
-'A little closer|Georgia O’Keeffe painted large flower pictures, among other subjects. Enlarging small forms makes them noticeable in a new way.|Zoom into the drawn flower. When do you stop seeing a flower and start seeing lines and shapes?|An enlarged flower detail',
-'Eight quiet lines|Agnes Martin worked with lines and geometric arrangements. Look for a while and small differences appear within seemingly even surfaces.|Draw eight lines. Go slowly, without a ruler. They do not need to be perfect. Paper works too.|Lines with small differences',
-'A place for everyone|Niki de Saint Phalle created large, walk-through projects as well as sculptures. Art could become a place for people to enjoy together.|Design a small public space. Add seating, step-free access and a meeting point. What matters to you?|A colourful gateway to a square'
-],fr:[
-'Trouver un rythme|Sophie Taeuber-Arp dessinait des tapis, des marionnettes, des meubles et des pièces entières. Elle dansait aussi. Cercles, lignes et rectangles traversent son travail, des sacs aux tableaux.|Touche les formes pour les tourner. Trouve un rythme qui te plaît, puis laisse une forme sortir du rang.|Des formes et du rythme',
-'Une photo sans appareil|Anna Atkins était botaniste et photographe. Elle posait des algues sur du papier sensible à la lumière. Après exposition, leurs formes restaient claires sur fond bleu. Ces cyanotypes lui ont servi à créer un livre sur les algues.|Pose trois feuilles sur le papier, puis appuie sur « Exposer ». Le papier reste clair sous les feuilles.|Des feuilles sur du papier bleu',
-'Le même rose, une autre impression|Sonia Delaunay peignait et créait des tissus, des vêtements et des objets pour sa maison. Elle explorait la façon dont les couleurs se répondent. Ses idées dépassaient largement la toile.|Change la couleur autour du rose. Le rose reste identique. Sur quel fond te semble-t-il le plus lumineux ?|Des cercles colorés et des bandes de tissu',
-'Un motif pour tout un mur|Mathilde Flögl travaillait pour la Wiener Werkstätte. Elle créait notamment des papiers peints, des textiles et des mises en page. Un motif pouvait changer l’ambiance de toute une pièce.|Change l’espace entre les motifs, puis essaie des rangées décalées. Quel papier peint choisirais-tu chez toi ?|Une esquisse de papier peint',
-'De l’espace entre les couleurs|Alma Thomas était enseignante et peintre. Elle a surtout développé sa peinture abstraite dans la seconde partie de sa vie. De petites touches colorées composent des surfaces animées, avec souvent du clair entre elles.|Change les espaces entre les touches. Quand la surface paraît-elle calme ou animée ? Choisis l’écart qui te plaît.|Des touches de couleur espacées',
-'À quoi ressemble une émotion ?|Hilma af Klint cherchait des images pour ce qu’on ne peut pas simplement voir : des pensées, des émotions, des idées spirituelles. Elle travaillait déjà avec des formes et des couleurs abstraites au début du XXe siècle.|Choisis une couleur et une forme pour ton humeur du jour. Donne un titre à l’image sans nommer directement cette émotion.|Un carnet de signes',
-'Un petit motif voyage|Felice Rix-Ueno créait des tissus, des papiers peints et des broderies pour la Wiener Werkstätte. Plus tard, elle a vécu et enseigné au Japon. Ses dessins regorgent de petits motifs imaginatifs.|Choisis une étoile, une plume ou un pompon. Pose ce motif à trois endroits. Souris, doigt ou clavier : tout fonctionne.|Une étoile, une plume et un pompon',
-'Qu’as-tu remarqué ?|Berthe Morisot faisait partie du cercle impressionniste. Elle peignait des personnes et des scènes du quotidien. Ses tableaux attirent aussi l’attention sur des instants brefs et de petits changements de lumière.|Regarde ce coin de pièce dessiné. Cache-le, puis réponds à la question de mémoire.|Une fenêtre et la lumière dans une pièce',
-'Un vase qui a du caractère|Vally Wieselthier était céramiste. Elle a travaillé pour la Wiener Werkstätte, puis aux États-Unis. Ses céramiques montrent qu’un récipient peut être bien plus qu’un objet pratique.|Change le corps et l’ouverture du vase. Il n’a pas besoin d’être symétrique. Quelle forme aimerais-tu prendre en main ?|Un vase dessiné librement',
-'Une carte pour quelqu’un|Mela Koehler créait notamment des cartes postales pour la Wiener Werkstätte. Une petite carte peut réunir un dessin, des lettres et un message personnel.|Écris un petit mot, puis choisis une bordure dessinée. Tu peux enregistrer et télécharger ta carte.|Une carte postale illustrée',
-'Une ligne dans l’espace|Ruth Asawa réalisait des sculptures ajourées en fil métallique. On peut voir à travers. L’air entre les lignes fait lui aussi partie de la forme.|Change le nombre de boucles. Observe comment les espaces entre les fils se transforment.|Une forme en boucles de fil',
-'Un autoportrait sans miroir|Paula Modersohn-Becker a peint beaucoup de femmes, de jeunes filles et d’autoportraits. Elle cherchait son propre regard, sans suivre simplement les idéaux de beauté de son époque.|Complète les trois phrases. Ne parle ni de ton métier ni de ton apparence. Qu’est-ce qui raconte autre chose de toi ?|Un miroir et une page blanche',
-'Une forme à déplier|Lygia Clark voulait que chacun puisse faire l’expérience de l’art et le transformer. Ses œuvres mobiles explorent ce qui se passe entre un objet et la personne qui le manipule.|Ouvre et ferme les panneaux reliés. Regarde-les de côté et d’en haut. Quelle position te surprend ?|Des panneaux reliés qui se plient',
-'Relier avec un fil|Pacita Abad a vécu dans de nombreux pays. Ses œuvres colorées associent souvent peinture et matières textiles. Voyages et rencontres occupent une place importante dans son travail.|Relie les morceaux de tissu avec des points. Touche les petites jonctions. Laisse au moins une couture ouverte.|Un morceau de tissu cousu',
-'Un costume qui se remarque|Maria Likarz-Strauss créait des tissus, des images imprimées et de la mode pour la Wiener Werkstätte. Elle a aussi dessiné des costumes de carnaval.|Choisis une coiffe, un haut et une jupe pour un costume de papier. Le porterais-tu pour une fête ?|Un costume de papier',
-'Une pièce dont tu te souviens|Louise Bourgeois travaillait le dessin, la sculpture et la gravure. Souvenirs et relations personnelles reviennent souvent dans ses œuvres.|Touche les cases pour dessiner le plan d’une pièce familière. Où laisserais-tu une porte ouverte ?|Une maison et un fil',
-'Une histoire plutôt étrange|Leonora Carrington était peintre et écrivaine. Dans ses mondes surréalistes, les choses familières rencontrent des êtres et des situations qui n’existent pas au quotidien.|Choisis trois éléments pour commencer une histoire. Prends la combinaison la plus étrange. Tu n’as pas besoin de l’expliquer.|Une théière en voyage',
-'Dans quelle tasse boire ?|Jutta Sika créait notamment de la vaisselle et des images imprimées. Le MAK conserve un modèle de tasse et de soucoupe d’après son dessin. Ici, forme et usage vont ensemble.|Place l’anse à gauche ou à droite et change sa taille. Pense à la façon dont tu tiendrais vraiment la tasse.|Une tasse et sa soucoupe',
-'Moins de pas dans la cuisine|Margarete Schütte-Lihotzky a conçu la cuisine de Francfort. Elle réfléchissait au travail dans un petit espace. Le MAK en conserve une reconstitution réalisée avec sa participation.|Réorganise le garde-manger, l’évier, le plan de travail et la cuisinière. Compare le trajet pour prendre, laver, couper et cuire.|Une petite cuisine vue d’en haut',
-'Un dessin entre dans une pièce|Lotte Calm créait des céramiques, des textiles, des jouets et des peintures murales pour la Wiener Werkstätte. Un motif pouvait ainsi devenir une partie d’un espace entier.|Place la branche dessinée au mur, au sol ou au plafond. Où change-t-elle le plus la pièce ?|Une branche comme décor mural',
-'Du nouveau avec des morceaux|Hannah Höch faisait partie du mouvement Dada à Berlin. Ses photomontages mettaient des images existantes en relation. Un fragment peut raconter autre chose à côté d’un autre.|Décale les trois bandes de l’image. Trouve une combinaison que tu n’avais pas prévue.|Des morceaux de papier en collage',
-'Encore un peu plus près|Georgia O’Keeffe a notamment peint de grandes fleurs. En agrandissant de petites formes, elle nous invite à les regarder autrement.|Zoome dans la fleur dessinée. À quel moment ne vois-tu plus une fleur, mais des lignes et des surfaces ?|Un détail de fleur agrandi',
-'Huit lignes tranquilles|Agnes Martin travaillait avec des lignes et des compositions géométriques. En regardant longtemps, on découvre de petites différences dans des surfaces apparemment régulières.|Trace huit lignes. Lentement, sans règle. Elles n’ont pas besoin d’être parfaites. Sur papier, ça marche aussi.|Des lignes légèrement différentes',
-'Un lieu pour tout le monde|Niki de Saint Phalle créait des sculptures, mais aussi de grands projets dans lesquels on peut entrer. L’art pouvait devenir un lieu à vivre ensemble.|Imagine une petite place publique. Ajoute des sièges, un accès sans marches et un point de rencontre. Qu’est-ce qui compte pour toi ?|Une porte colorée vers une place'
-]};
-function artistCopy(day,language){const [title,text,task,motif]=ARTIST_COPY[language][day-1].split('|');return{title,text,task,motif};}
-const UI={de:{
-skip:'Zum Inhalt',nav:'Navigation',idea:'So geht’s',post:'Kunstpost',ideas:'Meine Ideen',language:'Sprache',subtitle:'24 Künstlerinnen. Jeden Tag eine neue Idee.',intro:'Mach im Dezember jeden Tag eine kleine Pause mit Kunst. Öffne ein Fenster, lerne eine Künstlerin kennen und probier etwas aus. Kostenlos, ohne Vorwissen.',open:'Die erste Tür öffnen',dates:'1.–24. Dezember',preview:'Vorschau: Alle 24 Türen sind offen.',door:'Tür',visited:'entdeckt',houseLabel:'Ein Haus mit 24 Fenstern zum Öffnen',houseNote:'Ein bisschen Paris, Brüssel und Wien. Und Platz für deine Ideen.',howTitle:'Ein Fenster auf. Etwas Neues entdecken.',howText:'Hinter jedem Fenster findest du eine kurze Geschichte, eine eigene Zeichnung zum Thema und eine kleine Aufgabe. Mal klickst du, mal zeichnest du, mal schreibst du ein paar Worte. Jede Aufgabe ist anders.',howIdeas:'Dein Ergebnis gefällt dir? Speichere es unter „Meine Ideen“. Dort liegen deine eigenen Zeichnungen, Muster und Notizen. Du kannst sie auch herunterladen.',postTitle:'Morgens eine neue Tür im Postfach.',postText:'Du willst nicht jeden Tag an den Kalender denken? Dafür ist die Kunstpost gedacht: eine kurze E-Mail mit einem Link direkt zur nächsten Künstlerin. Kostenlos, ohne Passwort.',mailButton:'Eine Beispiel-Mail ansehen',demo:'E-Mail-Anmeldung und Versand sind in dieser Testversion noch nicht aktiv.',shareTitle:'Wem könnte das auch gefallen?',shareText:'Schick den kostenlosen Kalender weiter, wenn du magst. Du kannst einen eigenen Gruß dazuschreiben.',shareButton:'Den Kalender weitergeben',footer:'Ein Kunst-Advent von',footerNote:'Eigene digitale Zeichnungen und Übungen · 2026',back:'Zurück zum Haus',source:'Mehr dazu bei',yourTurn:'Probier’s aus',original:'Eigene Zeichnung zum Thema – kein Werk der Künstlerin.',save:'Unter „Meine Ideen“ speichern',saveNote:'Du speicherst dein eigenes Ergebnis, nur in diesem Browser.',reset:'Noch einmal anfangen',saved:'Gespeichert unter „Meine Ideen“.',temporary:'Nur für diesen Besuch gespeichert. Dein Browser erlaubt keine dauerhafte Speicherung.',needInput:'Probier zuerst etwas aus oder schreib ein paar Worte.',next:'Nächste Tür',previous:'Vorige Tür',ideasTitle:'Deine Zeichnungen, Muster und Notizen.',ideasIntro:'Hier findest du die Ergebnisse, die du bei den Aufgaben gespeichert hast. Lade sie herunter oder arbeite später daran weiter.',empty:'Noch nichts gespeichert. Öffne eine Tür, mach mit und drücke danach auf „Unter Meine Ideen speichern“.',local:'Nur auf diesem Gerät und in diesem Browser. Nichts wird an Salon Format geschickt.',download:'Herunterladen',continue:'Weiterbearbeiten',ownWork:'Deine eigene Arbeit',mailTitle:'So könnte die Kunstpost aussehen.',mailDate:'1. Dezember · Tür 1',mailSubject:'Heute: ein paar Formen und Sophie Taeuber-Arp.',hello:'Guten Morgen,',mailText:'Sophie Taeuber-Arp hat Teppiche, Marionetten und ganze Räume gestaltet. Heute probieren wir aus, wie aus einfachen Formen ein Rhythmus wird. Hast du zwei Minuten?',mailEnd:'Bis morgen,',mailUnsubscribe:'In der echten E-Mail kannst du dich hier jederzeit abmelden.',mailFlow:'Geplant: Adresse eintragen, Anmeldung per Link bestätigen und vom 1. bis 24. Dezember täglich eine neue Tür bekommen. Du kannst den Kalender auch ohne E-Mails nutzen.',shareHeading:'Ein kleiner Gruß und 24 Türen.',greeting:'Deine Nachricht',defaultGreeting:'Ich habe diesen kostenlosen Kunst-Adventskalender entdeckt und musste an dich denken. Jeden Tag eine Künstlerin und eine kleine Aufgabe. Vielleicht hast du Lust mitzumachen?',copy:'Gruß und Link kopieren',copyNote:'Es wird nichts verschickt. Du fügst den Text selbst in eine Nachricht ein.',copied:'Kopiert. Du kannst den Text jetzt in deine Nachricht einfügen.',copyFallback:'Bitte kopiere den markierten Text mit der Kopierfunktion deines Geräts.',makCollection:'In der MAK-Sammlung. Ob das Objekt gerade zu sehen ist, steht auf der Museumsseite.',makPast:'MAK-Bezug: eine frühere Ausstellung, keine Angabe zur aktuellen Präsentation.',makCurrent:'MAK: „Vally Wieselthier. Bild und Ton“, 29.4.2026–10.1.2027. Besuchsinformationen bitte beim Museum prüfen.',independent:'Unabhängiger Entwurf von Salon Format. Kein Auftrag und keine Kooperation mit dem MAK.',directory:'Wer steckt hinter den Fenstern?',directoryNote:'Einige dieser Gestalterinnen findest du auch in der MAK-Sammlung oder in früheren Ausstellungen.',choose:'Auswählen',spacing:'Abstand',offset:'Versetzte Reihen',expose:'Belichten',leaf:'Blatt hinzufügen',reveal:'Bild wieder ansehen',hide:'Bild ausblenden',memoryQuestion:'Was stand auf dem Tisch?',correct:'Genau, eine Zitrone. Schau gern noch einmal hin.',incorrect:'Es war eine Zitrone. Schau noch einmal ins Bild.',belly:'Bauch',opening:'Öffnung',asymmetry:'Asymmetrie',border:'Rand',greetingPlaceholder:'Ein kleiner Gruß …',loops:'Schlaufen',fold:'Aufklappen',view:'Ansicht',side:'Seitlich',above:'Von oben',stitch:'Naht',head:'Kopfform',top:'Oberteil',skirt:'Rock',room:'Raumfeld',handle:'Henkel',left:'Links',right:'Rechts',size:'Größe',route:'Weglänge',steps:'Einheiten',wall:'Wand',floor:'Boden',ceiling:'Decke',strip:'Bildstreifen',zoom:'Vergrößern',lines:'Linien',drawing:'Zeichenfläche: mit Maus oder Finger zeichnen. Papier geht natürlich auch.',seating:'Sitzplätze',access:'Zugang ohne Stufen',meeting:'Treffpunkt',namePicture:'Ein Name für dein Bild',moodShape:'Form',stamp:'Motiv setzen',turn:'Form drehen',savedAlt:'Dein Ergebnis zu',remove:'Entfernen',removed:'Aus deinen Ideen entfernt.',older:'Aus der ersten Testversion',moveLeft:'Nach links',moveRight:'Nach rechts'
-},en:{
-skip:'Skip to content',nav:'Navigation',idea:'How it works',post:'Art by email',ideas:'My ideas',language:'Language',subtitle:'24 women artists. A new idea every day.',intro:'Take a little break with art each day in December. Open a window, meet an artist and try something yourself. Free, with no experience needed.',open:'Open the first door',dates:'1–24 December',preview:'Preview: all 24 doors are open.',door:'Door',visited:'discovered',houseLabel:'One house with 24 windows to open',houseNote:'A little Paris, Brussels and Vienna. And room for your ideas.',howTitle:'Open a window. Discover something new.',howText:'Behind each window is a short story, an original drawing about the subject and a small activity. Sometimes you click, sometimes you draw or write a few words. Every activity is different.',howIdeas:'Like what you made? Save it under “My ideas”. That is where your own drawings, patterns and notes go. You can download them too.',postTitle:'A new door in your inbox each morning.',postText:'Rather not remember to visit every day? That is what the art emails are for: a short message with a link straight to the next artist. Free, with no password.',mailButton:'See an example email',demo:'Email sign-up and sending are not connected in this test version.',shareTitle:'Who else might enjoy this?',shareText:'Pass the free calendar on if you like. You can add a personal message.',shareButton:'Share the calendar',footer:'An art Advent calendar by',footerNote:'Original digital drawings and activities · 2026',back:'Back to the house',source:'Find out more at',yourTurn:'Have a go',original:'An original drawing about the subject, not a work by the artist.',save:'Save to “My ideas”',saveNote:'You are saving your own result, in this browser only.',reset:'Start again',saved:'Saved under “My ideas”.',temporary:'Saved for this visit only. Your browser is not allowing longer-term storage.',needInput:'Try something first, or write a few words.',next:'Next door',previous:'Previous door',ideasTitle:'Your drawings, patterns and notes.',ideasIntro:'Here are the results you chose to keep. Download them or come back and work on them again.',empty:'Nothing saved yet. Open a door, try the activity and press “Save to My ideas”.',local:'Only on this device and in this browser. Nothing is sent to Salon Format.',download:'Download',continue:'Keep working',ownWork:'Your own work',mailTitle:'Here is an example of the art email.',mailDate:'1 December · Door 1',mailSubject:'Today: a few shapes and Sophie Taeuber-Arp.',hello:'Good morning,',mailText:'Sophie Taeuber-Arp designed rugs, puppets and entire rooms. Today we are trying out how simple shapes can make a rhythm. Got two minutes?',mailEnd:'See you tomorrow,',mailUnsubscribe:'The real email will have a link here to unsubscribe at any time.',mailFlow:'Planned: enter your email, confirm through a link and get a new door each day from 1 to 24 December. You can also use the calendar without emails.',shareHeading:'A little message and 24 doors.',greeting:'Your message',defaultGreeting:'I found this free art Advent calendar and thought of you. A woman artist and a small activity every day. Fancy joining in?',copy:'Copy message and link',copyNote:'Nothing is sent. Paste the text into a message yourself.',copied:'Copied. You can paste it into your message now.',copyFallback:'Please copy the selected text using your device’s copy command.',makCollection:'In the MAK collection. Check the museum page to see whether the object is currently on display.',makPast:'MAK connection: a past exhibition, not a current display listing.',makCurrent:'MAK: “Vally Wieselthier. Bild und Ton”, 29 April 2026–10 January 2027. Check visiting details with the museum.',independent:'An independent Salon Format concept. Not commissioned by or made in partnership with the MAK.',directory:'Who is behind the windows?',directoryNote:'Some of these designers can also be explored in the MAK collection or through past exhibitions.',choose:'Choose',spacing:'Spacing',offset:'Staggered rows',expose:'Expose',leaf:'Add a leaf',reveal:'Show the picture again',hide:'Hide the picture',memoryQuestion:'What was on the table?',correct:'Yes, a lemon. Have another look if you like.',incorrect:'It was a lemon. Take another look at the picture.',belly:'Body',opening:'Opening',asymmetry:'Asymmetry',border:'Border',greetingPlaceholder:'A little message …',loops:'Loops',fold:'Unfold',view:'View',side:'From the side',above:'From above',stitch:'Seam',head:'Headpiece',top:'Top',skirt:'Skirt',room:'Room square',handle:'Handle',left:'Left',right:'Right',size:'Size',route:'Route length',steps:'units',wall:'Wall',floor:'Floor',ceiling:'Ceiling',strip:'Picture strip',zoom:'Zoom',lines:'Lines',drawing:'Drawing area: use your mouse or finger. Paper works too.',seating:'Seating',access:'Step-free access',meeting:'Meeting point',namePicture:'A name for your picture',moodShape:'Shape',stamp:'Place a motif',turn:'Turn shape',savedAlt:'Your result for',remove:'Remove',removed:'Removed from your ideas.',older:'From the first test version',moveLeft:'Move left',moveRight:'Move right'
-},fr:{
-skip:'Aller au contenu',nav:'Navigation',idea:'Comment ça marche',post:'La lettre d’art',ideas:'Mes idées',language:'Langue',subtitle:'24 artistes. Une nouvelle idée chaque jour.',intro:'En décembre, prends une petite pause avec l’art. Ouvre une fenêtre, découvre une artiste et essaie quelque chose. C’est gratuit, sans rien avoir à connaître avant.',open:'Ouvrir la première porte',dates:'Du 1er au 24 décembre',preview:'Aperçu : les 24 portes sont ouvertes.',door:'Porte',visited:'découvertes',houseLabel:'Une maison avec 24 fenêtres à ouvrir',houseNote:'Un peu de Paris, de Bruxelles et de Vienne. Et de la place pour tes idées.',howTitle:'Ouvre une fenêtre. Découvre quelque chose.',howText:'Derrière chaque fenêtre, une courte histoire, un dessin original sur le sujet et une petite activité. Parfois tu cliques, parfois tu dessines ou écris quelques mots. Chaque activité est différente.',howIdeas:'Ton résultat te plaît ? Enregistre-le dans « Mes idées ». Tu y retrouveras tes dessins, tes motifs et tes notes. Tu peux aussi les télécharger.',postTitle:'Chaque matin, une porte dans ta boîte mail.',postText:'Tu préfères ne pas avoir à y penser chaque jour ? La lettre d’art est prévue pour ça : un petit message avec un lien vers la prochaine artiste. Gratuit, sans mot de passe.',mailButton:'Voir un exemple de mail',demo:'L’inscription et l’envoi des mails ne sont pas encore actifs dans cette version test.',shareTitle:'À qui ça pourrait plaire aussi ?',shareText:'Partage ce calendrier gratuit si tu en as envie. Tu peux ajouter un petit mot personnel.',shareButton:'Partager le calendrier',footer:'Un calendrier de l’Avent artistique par',footerNote:'Dessins numériques et activités originaux · 2026',back:'Retour à la maison',source:'En savoir plus auprès de',yourTurn:'À toi d’essayer',original:'Un dessin original sur le sujet, pas une œuvre de l’artiste.',save:'Enregistrer dans « Mes idées »',saveNote:'Tu enregistres ton propre résultat, dans ce navigateur uniquement.',reset:'Recommencer',saved:'Enregistré dans « Mes idées ».',temporary:'Enregistré pour cette visite seulement. Ton navigateur ne permet pas de le garder plus longtemps.',needInput:'Essaie d’abord quelque chose ou écris quelques mots.',next:'Porte suivante',previous:'Porte précédente',ideasTitle:'Tes dessins, tes motifs et tes notes.',ideasIntro:'Voici les résultats que tu as choisi de garder. Télécharge-les ou reviens y travailler plus tard.',empty:'Rien d’enregistré. Ouvre une porte, essaie l’activité, puis appuie sur « Enregistrer dans Mes idées ».',local:'Uniquement sur cet appareil et dans ce navigateur. Rien n’est envoyé à Salon Format.',download:'Télécharger',continue:'Continuer',ownWork:'Ta propre création',mailTitle:'Voici un exemple de la lettre d’art.',mailDate:'1er décembre · Porte 1',mailSubject:'Aujourd’hui : quelques formes et Sophie Taeuber-Arp.',hello:'Bonjour,',mailText:'Sophie Taeuber-Arp a créé des tapis, des marionnettes et des pièces entières. Aujourd’hui, on essaie de trouver un rythme avec des formes simples. Tu as deux minutes ?',mailEnd:'À demain,',mailUnsubscribe:'Le vrai mail proposera ici un lien pour te désinscrire à tout moment.',mailFlow:'Prévu : tu saisis ton adresse, tu confirmes par un lien et tu reçois une porte par jour du 1er au 24 décembre. Tu peux aussi utiliser le calendrier sans les mails.',shareHeading:'Un petit mot et 24 portes.',greeting:'Ton message',defaultGreeting:'J’ai découvert ce calendrier de l’Avent artistique gratuit et j’ai pensé à toi. Chaque jour, une artiste et une petite activité. Ça te dit de participer ?',copy:'Copier le message et le lien',copyNote:'Rien n’est envoyé. Tu colles toi-même le texte dans un message.',copied:'Copié. Tu peux maintenant le coller dans ton message.',copyFallback:'Copie le texte sélectionné avec la commande de ton appareil.',makCollection:'Dans la collection du MAK. La page du musée indique si l’objet est actuellement exposé.',makPast:'Lien avec le MAK : une exposition passée, pas une présentation actuelle.',makCurrent:'MAK : « Vally Wieselthier. Bild und Ton », du 29 avril 2026 au 10 janvier 2027. Vérifie les informations de visite auprès du musée.',independent:'Un projet indépendant de Salon Format. Ni une commande ni une collaboration avec le MAK.',directory:'Qui se cache derrière les fenêtres ?',directoryNote:'Retrouve aussi certaines de ces créatrices dans la collection du MAK ou dans ses expositions passées.',choose:'Choisir',spacing:'Espacement',offset:'Rangées décalées',expose:'Exposer',leaf:'Ajouter une feuille',reveal:'Revoir l’image',hide:'Cacher l’image',memoryQuestion:'Qu’y avait-il sur la table ?',correct:'Oui, un citron. Tu peux regarder encore.',incorrect:'C’était un citron. Regarde à nouveau l’image.',belly:'Corps',opening:'Ouverture',asymmetry:'Asymétrie',border:'Bordure',greetingPlaceholder:'Un petit mot…',loops:'Boucles',fold:'Déplier',view:'Vue',side:'De côté',above:'D’en haut',stitch:'Couture',head:'Coiffe',top:'Haut',skirt:'Jupe',room:'Case de la pièce',handle:'Anse',left:'À gauche',right:'À droite',size:'Taille',route:'Longueur du trajet',steps:'unités',wall:'Mur',floor:'Sol',ceiling:'Plafond',strip:'Bande de l’image',zoom:'Agrandir',lines:'Lignes',drawing:'Zone de dessin : souris ou doigt. Tu peux aussi utiliser du papier.',seating:'Des sièges',access:'Accès sans marches',meeting:'Un point de rencontre',namePicture:'Un titre pour ton image',moodShape:'Forme',stamp:'Poser un motif',turn:'Tourner la forme',savedAlt:'Ton résultat pour',remove:'Retirer',removed:'Retiré de tes idées.',older:'De la première version test',moveLeft:'Vers la gauche',moveRight:'Vers la droite'
-}};
-const OPTIONS={de:{colors:['Blau','Rot','Grün','Rosa','Gold','Tuschschwarz'],shapes:['Kreis','Dreieck','Bogen'],motifs:['Stern','Feder','Quaste'],memory:['Eine Zitrone','Ein Schuh','Ein Buch'],starts:['Ich mag …','Ich denke oft an …','Ich möchte …'],kitchen:['Vorrat','Spüle','Arbeitsfläche','Herd'],story:[['Eine Teekanne','Ein Vogel','Ein Handschuh'],['träumt von','versteckt','besucht'],['einem Wintergarten','dem Mond','einem sprechenden Stuhl']]},en:{colors:['Blue','Red','Green','Pink','Gold','Ink black'],shapes:['Circle','Triangle','Arch'],motifs:['Star','Feather','Tassel'],memory:['A lemon','A shoe','A book'],starts:['I enjoy …','I often think about …','I would like …'],kitchen:['Pantry','Sink','Worktop','Cooker'],story:[['A teapot','A bird','A glove'],['dreams of','hides','visits'],['a winter garden','the moon','a talking chair']]},fr:{colors:['Bleu','Rouge','Vert','Rose','Or','Noir encre'],shapes:['Cercle','Triangle','Arche'],motifs:['Étoile','Plume','Pompon'],memory:['Un citron','Une chaussure','Un livre'],starts:['J’aime…','Je pense souvent à…','J’aimerais…'],kitchen:['Réserve','Évier','Plan de travail','Cuisinière'],story:[['Une théière','Un oiseau','Un gant'],['rêve de','cache','rend visite à'],['un jardin d’hiver','la lune','une chaise qui parle']]}};
-Object.assign(UI.de,{howIdeas:'Dein Ergebnis gefällt dir? Du kannst es herunterladen oder teilen. Es gibt kein Konto und keine Sammlung. Wenn du das Fenster verlässt, wird dein Ergebnis nicht aufbewahrt.',resultShare:'Ergebnis teilen',noStorage:'Hier wird nichts gespeichert. Wenn du dein Ergebnis behalten möchtest, lade es herunter.',shareFallback:'Dieses Gerät kann die Bilddatei nicht direkt teilen. Lade sie herunter und verschicke sie in deiner Lieblings-App. Den Link zu dieser Aufgabe kannst du hier kopieren.',copyTask:'Link zur Aufgabe kopieren',shareResultText:'Mein kleines Experiment zu',resetNote:'Beim Verlassen dieser Aufgabe geht das Ergebnis verloren.'});
-Object.assign(UI.en,{howIdeas:'Like what you made? Download or share it. There is no account or collection. Your result is not kept when you leave the activity.',resultShare:'Share your result',noStorage:'Nothing is saved here. Download your result if you want to keep it.',shareFallback:'This device cannot share the image file directly. Download it and send it through your favourite app. You can also copy the link to this activity here.',copyTask:'Copy activity link',shareResultText:'My little experiment about',resetNote:'Your result is lost when you leave this activity.'});
-Object.assign(UI.fr,{howIdeas:'Ton résultat te plaît ? Télécharge-le ou partage-le. Il n’y a ni compte ni collection. Ton résultat n’est pas conservé quand tu quittes l’activité.',resultShare:'Partager ton résultat',noStorage:'Rien n’est enregistré ici. Télécharge ton résultat si tu veux le garder.',shareFallback:'Cet appareil ne peut pas partager directement le fichier image. Télécharge-le et envoie-le avec ton appli préférée. Tu peux aussi copier le lien de cette activité ici.',copyTask:'Copier le lien de l’activité',shareResultText:'Ma petite expérience autour de',resetNote:'Ton résultat disparaît quand tu quittes cette activité.'});
 
-const CALENDAR_COPY={
-de:{calendar:'Zum Kalender',before:'Am 1. Dezember geht’s los. Danach kommt jeden Tag ein Fenster dazu.',during:'Die bisherigen Tage kannst du jederzeit öffnen. Die nächsten bleiben eine Überraschung.',closed:'Noch geschlossen',available:'Öffnen',previewMode:'Testvorschau',previewLabel:'Tag im Dezember',previewExit:'Vorschau beenden',previewEnter:'Kalender vorab testen',lockedTitle:'Dieses Fenster ist noch zu.',lockedText:'Es öffnet sich am {day}. Dezember. Bis dahin kannst du die bisherigen Tage besuchen.',whyTitle:'Warum Künstlerinnen?',whyText:'Dieser Advent gehört 24 Frauen, die Kunst und Gestaltung geprägt haben: mit Bildern, Stoffen, Möbeln und ganz eigenen Ideen. Einige Namen kennst du vielleicht schon, andere lernst du hier kennen.',whyBenefit:'Jeden Tag gibt es eine kurze Geschichte und etwas zum Ausprobieren. Du brauchst kein Vorwissen und kein Material. Nimm dir ein paar Minuten, spiel mit Farben oder Formen und schau, was dir gefällt.',howTitle:'So funktioniert der Kalender',howText:'Vom 1. bis 24. Dezember öffnet sich täglich ein neues Fenster. Frühere Tage bleiben zugänglich. Hinter jedem Fenster lernst du eine Künstlerin kennen und kannst eine kleine Aufgabe ausprobieren.',sources:'Quellen & weiterlesen',rights:'Die verlinkte Museumsseite ist unsere Quelle zum Nachlesen. Für Bilder und Texte dort gelten die jeweiligen Nutzungsbedingungen. Die Zeichnung und die Aufgabe hier wurden für diesen Kalender erstellt.',intro:'Ein kostenloser Adventskalender für alle, die Kunst mögen oder neugierig darauf sind. Jeden Tag lernst du eine Künstlerin kennen und kannst selbst etwas ausprobieren.',open:'Zum Haus',directory:'Die Künstlerinnen – mit Quellen',directoryNote:'Achtung, hier verraten wir die Namen. Die Aufgaben bleiben hinter den Fenstern.'},
-en:{calendar:'Back to the calendar',before:'We start on 1 December. A new window becomes available each day.',during:'You can revisit earlier days at any time. The next ones stay a surprise.',closed:'Not open yet',available:'Open',previewMode:'Test preview',previewLabel:'Day in December',previewExit:'Leave preview',previewEnter:'Try the calendar early',lockedTitle:'This window is still closed.',lockedText:'It opens on {day} December. You can visit the earlier days while you wait.',whyTitle:'Why women artists?',whyText:'This Advent belongs to 24 women who shaped art and design through paintings, textiles, furniture and ideas of their own. You may know some names already; others will be new to you.',whyBenefit:'Each day brings a short story and something to try. You don’t need any experience or materials. Take a few minutes, play with colours or shapes and see what you like.',howTitle:'How the calendar works',howText:'A new window becomes available every day from 1 to 24 December. Earlier days remain accessible. Behind each window you’ll meet an artist and find a small activity to try.',sources:'Sources & further reading',rights:'The museum page linked here is our source for further reading. Its images and texts have their own terms of use. The drawing and activity here were created for this calendar.',intro:'A free Advent calendar for anyone who enjoys art or is curious about it. Meet an artist each day and try something yourself.',open:'Go to the house',directory:'The artists — with sources',directoryNote:'Spoiler: this list reveals the names. The activities stay behind the windows.'},
-fr:{calendar:'Retour au calendrier',before:'Rendez-vous le 1er décembre. Une nouvelle fenêtre sera accessible chaque jour.',during:'Les jours précédents restent accessibles. Les suivants gardent leur surprise.',closed:'Encore fermée',available:'Ouvrir',previewMode:'Aperçu de test',previewLabel:'Jour de décembre',previewExit:'Quitter l’aperçu',previewEnter:'Tester le calendrier en avance',lockedTitle:'Cette fenêtre est encore fermée.',lockedText:'Elle s’ouvrira le {day} décembre. En attendant, vous pouvez retrouver les jours précédents.',whyTitle:'Pourquoi des artistes femmes ?',whyText:'Cet Avent est consacré à 24 femmes qui ont marqué l’art et le design avec leurs tableaux, tissus, meubles et idées. Certains noms vous seront familiers ; d’autres seront une découverte.',whyBenefit:'Chaque jour, une courte histoire et une petite activité. Pas besoin de connaissances ni de matériel. Prenez quelques minutes, jouez avec les couleurs ou les formes et voyez ce qui vous plaît.',howTitle:'Comment fonctionne le calendrier',howText:'Du 1er au 24 décembre, une nouvelle fenêtre devient accessible chaque jour. Les jours précédents restent ouverts. Derrière chaque fenêtre, vous découvrez une artiste et une petite activité à essayer.',sources:'Sources et lectures',rights:'La page du musée indiquée ici est notre source pour en savoir plus. Ses images et textes ont leurs propres conditions d’utilisation. Le dessin et l’activité présentés ici ont été créés pour ce calendrier.',intro:'Un calendrier de l’Avent gratuit pour les amateurs d’art et les curieux. Chaque jour, découvrez une artiste et essayez quelque chose à votre tour.',open:'Voir la maison',directory:'Les artistes et les sources',directoryNote:'Attention, cette liste révèle les noms. Les activités restent derrière les fenêtres.'}
+
+const ARTIST_COPY = {
+  "de": [
+    "Formen, die zusammenpassen|Sophie Taeuber-Arp arbeitete mit Textilien, Marionetten, Möbeln und Architektur. Ihre geometrischen Formen findet man auf kleinen Gegenständen genauso wie in ganzen Räumen.|Tippe die Formen an und drehe sie. Such einen Rhythmus, der dir gefällt. Lass dann eine Form bewusst aus der Reihe tanzen.|Formen und Rhythmus",
+    "Fotografieren ohne Kamera|Anna Atkins verband Botanik und Fotografie. Sie legte Algen direkt auf lichtempfindliches Papier: Nach dem Belichten und Auswaschen blieben ihre hellen Umrisse auf blauem Grund zurück.|Lege drei Blätter auf das Papier. Drücke dann auf „Belichten“. Wo die Blätter lagen, bleibt das Papier hell.|Blätter auf blauem Papier",
+    "Dasselbe Rosa, ganz anders|Sonia Delaunay entwarf Bilder, Stoffe, Kleider und Einrichtungsgegenstände. Sie beschäftigte sich damit, wie Farben nebeneinander wirken. Ein Farbton kann je nach Umgebung ganz anders erscheinen.|Wechsle die Farbe um das Rosa herum. Das Rosa selbst bleibt gleich. Auf welchem Hintergrund wirkt es für dich am hellsten?|Farbige Kreise und Stoffstreifen",
+    "Ein Muster für die ganze Wand|Mathilde Flögl entwarf für die Wiener Werkstätte unter anderem Tapeten, Textilien und Bücher. Bei einer Tapete zählt nicht nur das einzelne Motiv, sondern auch, wie es sich über die Wand wiederholt.|Verändere den Abstand zwischen den Motiven. Probier dann eine versetzte Anordnung. Welche Tapete würdest du zu Hause haben wollen?|Ein Tapetenentwurf",
+    "Platz zwischen den Farben|Alma Thomas malte abstrakte Bilder aus vielen kleinen Farbstrichen. Oft bleibt zwischen ihnen der helle Bildgrund sichtbar. Diese Lücken gehören ebenso zum Bild wie die Farbe.|Verändere die Lücken zwischen den Farbstrichen. Wann wirkt die Fläche ruhig, wann bewegt? Wähle deinen Lieblingsabstand.|Farbstriche mit Zwischenräumen",
+    "Wie sieht ein Gefühl aus?|Hilma af Klint entwickelte abstrakte Bilder aus Formen, Farben und Zeichen. Sie wollte damit auch Kräfte und Zusammenhänge darstellen, die man nicht direkt sehen kann. Ihre spirituellen Vorstellungen spielten dabei eine wichtige Rolle.|Wähle eine Farbe und eine Form für deine heutige Stimmung. Gib dem kleinen Bild einen Namen, ohne das Gefühl direkt zu nennen.|Ein Notizbuch mit Zeichen",
+    "Ein kleines Motiv geht auf Reisen|Felice Rix-Ueno entwarf für die Wiener Werkstätte Stoffe, Tapeten und Stickereien. Kleine Pflanzenformen und fantasievolle Motive tauchen in ihren Entwürfen immer wieder auf. Später lebte und lehrte sie in Japan.|Wähle Stern, Feder oder Quaste. Setze dein Motiv an drei Stellen auf die Fläche. Du kannst mit Maus, Finger oder Tastatur arbeiten.|Stern, Feder und Quaste",
+    "Was ist dir aufgefallen?|Berthe Morisot malte Menschen in Wohnungen, Gärten und Parks. Als Impressionistin interessierte sie sich auch für wechselndes Licht und den flüchtigen Eindruck einer Situation.|Schau dir die gezeichnete Zimmerecke an. Blende sie dann aus und beantworte die Frage aus dem Gedächtnis.|Ein Fenster und das Licht im Zimmer",
+    "Eine Vase mit Charakter|Vally Wieselthier arbeitete mit Keramik in Wien und später in den USA. Ihre Gefäße und Figuren verbinden kräftige Formen mit einer freien, bewegten Gestaltung.|Verändere Bauch und Öffnung der Vase. Sie muss nicht symmetrisch sein. Welche Form würdest du gern in die Hand nehmen?|Eine frei gezeichnete Vase",
+    "Eine Karte für jemanden|Mela Koehler gestaltete Postkarten und Modebilder. Auf dem kleinen Format brachte sie Figuren, Kleidung und Schrift zusammen. Viele ihrer Entwürfe entstanden für die Wiener Werkstätte.|Schreibe einen kurzen Gruß und wähle einen gezeichneten Rand. Wenn dir deine Karte gefällt, kannst du sie herunterladen oder teilen.|Eine illustrierte Postkarte",
+    "Eine Linie im Raum|Ruth Asawas Skulpturen aus Draht sind durchlässig: Man sieht die Form und zugleich durch sie hindurch. Die vielen Schlaufen bilden eine Oberfläche, ohne den Innenraum zu verschließen.|Verändere die Anzahl der Drahtschlaufen. Achte darauf, wie sich die offenen Zwischenräume verändern.|Ein Körper aus Drahtschlaufen",
+    "Ein Selbstporträt ohne Spiegel|Paula Modersohn-Becker malte Frauen, Kinder und viele Selbstbildnisse. Dabei stellte sie Menschen ohne die damals üblichen Idealisierungen dar. Ihr eigenes Gesicht und ihr Körper wurden zu wiederkehrenden Motiven.|Ergänze die drei Satzanfänge. Lass Beruf und Aussehen weg. Was erzählt sonst noch etwas über dich?|Ein Spiegel mit einem leeren Blatt",
+    "Eine Form zum Aufklappen|Lygia Clark machte das Verändern eines Kunstwerks zum Teil der künstlerischen Erfahrung. Bei ihren beweglichen Metallarbeiten entsteht die Form auch durch die Hände der Person, die sie aufklappt.|Klappe die verbundenen Flächen auf und zu. Schau seitlich und von oben darauf. Welche Stellung überrascht dich?|Miteinander verbundene Flächen",
+    "Mit einem Faden verbinden|Pacita Abad verband Malerei mit textilen Techniken. Sie nähte, polsterte und ergänzte ihre bemalten Leinwände mit weiteren Materialien. So bekamen die Bilder eine spürbare Tiefe.|Verbinde die farbigen Stoffstücke mit Stichen. Tippe auf die kleinen Verbindungen. Lass mindestens eine Naht offen.|Ein genähtes Stoffstück",
+    "Ein Kostüm, das auffällt|Maria Likarz-Strauss gestaltete Stoffe, Mode und Druckgrafik für die Wiener Werkstätte. Auch Faschingskostüme gehörten zu ihren Entwürfen. Kleidung war für sie damit sowohl Gebrauchsgegenstand als auch Bildmotiv.|Kombiniere eine Kopfform, ein Oberteil und einen Rock zu einem Papierkostüm. Würdest du so auf ein Fest gehen?|Ein Papierkostüm",
+    "Ein Raum aus der Erinnerung|Louise Bourgeois beschäftigte sich in Zeichnungen, Skulpturen und Druckgrafiken immer wieder mit Erinnerungen und Beziehungen. Häuser und Räume konnten dabei für persönliche Erfahrungen stehen.|Tippe die Felder an und skizziere den Grundriss eines vertrauten Raums. Welche Bereiche fallen dir zuerst ein?|Ein Haus und ein Faden",
+    "Eine ziemlich seltsame Geschichte|Leonora Carrington war Malerin und Schriftstellerin. In ihren Bildern und Geschichten stehen vertraute Dinge neben erfundenen Wesen. Was im Alltag nicht zusammengehört, kann bei ihr ganz selbstverständlich nebeneinander vorkommen.|Wähle drei Teile für den Anfang einer Geschichte. Nimm die ungewöhnlichste Kombination. Du musst sie nicht erklären.|Eine Teekanne auf Reisen",
+    "Aus welcher Tasse trinkst du?|Jutta Sika gestaltete Geschirr und grafische Arbeiten. Das MAK bewahrt ein Modell einer Tasse mit Untertasse nach ihrem Entwurf. An so einem Alltagsgegenstand lässt sich gut beobachten, wie Form und Gebrauch zusammenhängen.|Setze den Henkel nach links oder rechts und ändere seine Größe. Denk daran, wie du die Tasse tatsächlich halten würdest.|Tasse und Untertasse",
+    "Kurze Wege in der Küche|Margarete Schütte-Lihotzky plante die Frankfurter Küche für kleine Wohnungen. Die Anordnung sollte Arbeitsabläufe vereinfachen und Wege verkürzen. Im MAK steht ein Nachbau, der mit ihrer Beteiligung entstand.|Ordne Vorrat, Spüle, Arbeitsfläche und Herd neu. Vergleiche den Weg für „holen, waschen, schneiden, kochen“.|Eine kleine Küche von oben",
+    "Ein Bild zieht in einen Raum|Lotte Calm entwarf Keramik, Stoffmuster, Spielzeug und Wandmalereien für die Wiener Werkstätte. Ein Motiv konnte bei ihr als kleines Objekt auftauchen oder einen ganzen Raum mitgestalten.|Setze den gezeichneten Zweig an die Wand, auf den Boden oder an die Decke. Wo verändert er den Raum am stärksten?|Ein Zweig als Wandgestaltung",
+    "Aus Teilen wird etwas Neues|Hannah Höch arbeitete mit Fotomontage und Collage. Sie schnitt Bilder aus ihrem ursprünglichen Zusammenhang heraus und setzte sie neu zusammen. Dadurch konnten sich Gesichter, Körper und ihre Bedeutung verändern.|Verschiebe die drei Bildstreifen gegeneinander. Such eine Kombination, die vorher nicht geplant war.|Papierausschnitte als Collage",
+    "Noch ein Stück näher|Georgia O’Keeffe malte Blumen oft stark vergrößert. Ein kleines Blütendetail konnte so fast das ganze Bild ausfüllen. Linien, Rundungen und Farbübergänge bekommen dadurch mehr Aufmerksamkeit.|Zoome in die gezeichnete Blüte hinein. Wann siehst du keine Blume mehr, sondern nur noch Linien und Flächen?|Ein stark vergrößertes Blütendetail",
+    "Acht ruhige Linien|Agnes Martin arbeitete mit feinen Linien, Rastern und zurückhaltenden Farben. Ihre Bilder wirken zunächst gleichmäßig. Aus der Nähe zeigen sich kleine Unterschiede in den gezeichneten Linien.|Ziehe acht Linien, langsam und ohne Lineal. Schau danach auf die kleinen Unterschiede. Du kannst auch auf Papier zeichnen.|Linien mit kleinen Unterschieden",
+    "Ein Ort für alle|Niki de Saint Phalle schuf farbige Skulpturen und große begehbare Anlagen. Menschen konnten ihre Kunst also auch als Umgebung erleben, statt sie nur von außen anzuschauen.|Gestalte einen kleinen öffentlichen Platz. Füge Sitzplätze, einen stufenlosen Zugang und einen Treffpunkt hinzu. Was ist dir wichtig?|Ein farbiges Tor zu einem Platz"
+  ],
+  "en": [
+    "Finding a rhythm|Sophie Taeuber-Arp worked with textiles, puppets, furniture and architecture. Her geometric forms appear on small objects as well as across entire rooms.|Tap the shapes to turn them. Find a rhythm you like, then let one shape break the pattern.|Shapes and rhythm",
+    "A photograph without a camera|Anna Atkins brought botany and photography together. She placed algae directly on light-sensitive paper. After exposure and washing, their pale outlines remained against a blue ground.|Place three leaves on the paper, then press “Expose”. The paper stays pale where the leaves covered it.|Leaves on blue paper",
+    "The same pink, a different feeling|Sonia Delaunay made paintings, textiles, clothes and furnishings. She explored how colours affect one another: the same shade can look different in a different setting.|Change the colour around the pink. The pink itself stays the same. Which background makes it look brightest to you?|Coloured circles and fabric strips",
+    "A pattern for a whole wall|Mathilde Flögl designed wallpapers, textiles and books for the Wiener Werkstätte. With wallpaper, the individual motif matters, but so does the way it repeats across a wall.|Change the distance between the motifs, then try staggered rows. Which wallpaper would you choose for your own home?|A wallpaper sketch",
+    "Space between colours|Alma Thomas built abstract paintings from many small strokes of colour. The pale ground often shows between them. Those gaps are as much a part of the picture as the paint.|Change the gaps between the colour marks. When does the surface feel calm or lively? Choose your favourite spacing.|Colour marks with gaps",
+    "What does a feeling look like?|Hilma af Klint developed abstract images from shapes, colours and signs. She wanted to depict forces and connections that cannot be seen directly. Her spiritual beliefs played an important part.|Choose a colour and a shape for your mood today. Name your little picture without naming the feeling itself.|A notebook of signs",
+    "A small motif travels|Felice Rix-Ueno designed fabrics, wallpapers and embroidery for the Wiener Werkstätte. Small plant forms and imaginative motifs recur in her designs. She later lived and taught in Japan.|Choose a star, feather or tassel. Place it in three spots. You can use a mouse, your finger or the keyboard.|A star, feather and tassel",
+    "What caught your eye?|Berthe Morisot painted people in homes, gardens and parks. As an Impressionist, she was interested in changing light and the fleeting impression of a scene.|Look at the drawn corner of a room. Hide it, then answer the question from memory.|A window and the light in a room",
+    "A vase with character|Vally Wieselthier worked in ceramics in Vienna and later in the United States. Her vessels and figures combine strong shapes with a loose, lively approach to form.|Change the body and opening of the vase. It does not have to be symmetrical. Which shape would you like to hold?|A freely drawn vase",
+    "A card for someone|Mela Koehler designed postcards and fashion illustrations. She brought figures, clothing and lettering together within a small format. Many of her designs were made for the Wiener Werkstätte.|Write a short message and choose a drawn border. If you like your card, you can download or share it.|An illustrated postcard",
+    "A line in space|Ruth Asawa’s wire sculptures are open: you see the form and look through it at the same time. Their many loops create a surface without closing off the space inside.|Change the number of wire loops. Watch how the spaces between them change.|A form made of wire loops",
+    "A self-portrait without a mirror|Paula Modersohn-Becker painted women, children and many self-portraits, moving away from the idealised depictions common at the time. Her own face and body became recurring subjects.|Finish the three sentences. Leave out your job and your appearance. What else tells us something about you?|A mirror and a blank page",
+    "A form you can unfold|Lygia Clark made changing an artwork part of experiencing it. In her hinged metal works, the person unfolding the object also helps give it its form.|Open and close the connected panels. Look from the side and from above. Which position surprises you?|Connected folding panels",
+    "Joining things with thread|Pacita Abad combined painting with textile techniques. She stitched, padded and added materials to her painted canvases, giving their surfaces physical depth.|Join the coloured patches with stitches. Tap the small connections. Leave at least one seam open.|A stitched piece of fabric",
+    "A costume that stands out|Maria Likarz-Strauss designed fabrics, fashion and printed graphics for the Wiener Werkstätte, including carnival costumes. Clothing was both something to wear and a subject for images.|Choose a headpiece, top and skirt for a paper costume. Would you wear it to a party?|A paper costume",
+    "A room you remember|Louise Bourgeois returned to memories and relationships in her drawings, sculptures and prints. Houses and rooms could take on meanings tied to personal experience.|Select the squares to sketch the floor plan of a familiar room. Which parts come to mind first?|A house and a thread",
+    "A rather strange story|Leonora Carrington was a painter and writer. Familiar things share her pictures and stories with invented creatures. Things that do not belong together in everyday life can seem perfectly at home there.|Choose three parts for the start of a story. Pick the strangest combination. You do not have to explain it.|A travelling teapot",
+    "Which cup would you use?|Jutta Sika designed tableware and graphic works. The MAK holds a model of a cup and saucer from her design. An everyday object like this makes the relationship between form and use tangible.|Move the handle to the left or right and change its size. Think about how you would actually hold the cup.|A cup and saucer",
+    "Shorter journeys in the kitchen|Margarete Schütte-Lihotzky planned the Frankfurt Kitchen for small flats. Its layout was intended to simplify work and shorten distances. The MAK holds a reconstruction made with her involvement.|Rearrange the pantry, sink, worktop and cooker. Compare the route for collecting, washing, chopping and cooking.|A small kitchen seen from above",
+    "A picture moves into a room|Lotte Calm designed ceramics, fabric patterns, toys and wall paintings for the Wiener Werkstätte. A motif might appear on a small object or become part of a whole room.|Place the drawn branch on the wall, floor or ceiling. Where does it change the room most?|A branch as a wall decoration",
+    "Making something new from pieces|Hannah Höch worked with photomontage and collage. She cut images out of their original setting and put them together again, changing faces, bodies and what they might mean.|Slide the three picture strips past each other. Find a combination you did not plan.|Paper fragments in a collage",
+    "A little closer|Georgia O’Keeffe often painted flowers on a greatly enlarged scale. A small detail could fill almost the entire picture, drawing attention to lines, curves and transitions in colour.|Zoom into the drawn flower. When do you stop seeing a flower and start seeing lines and shapes?|An enlarged flower detail",
+    "Eight quiet lines|Agnes Martin worked with fine lines, grids and restrained colours. Her paintings may look regular at first. Up close, small variations in the drawn lines become visible.|Draw eight lines slowly, without a ruler. Then look at the small differences. You can also draw on paper.|Lines with small differences",
+    "A place for everyone|Niki de Saint Phalle made colourful sculptures and large environments that people could enter. Her work could be experienced as a place, as well as viewed as an object.|Design a small public space. Add seating, step-free access and a meeting point. What matters to you?|A colourful gateway to a square"
+  ],
+  "fr": [
+    "Trouver un rythme|Sophie Taeuber-Arp travaillait le textile, les marionnettes, le mobilier et l’architecture. Ses formes géométriques se retrouvent sur de petits objets comme dans des pièces entières.|Touche les formes pour les tourner. Trouve un rythme qui te plaît, puis laisse une forme sortir du rang.|Des formes et du rythme",
+    "Une photo sans appareil|Anna Atkins associait botanique et photographie. Elle posait des algues directement sur du papier photosensible. Après exposition et rinçage, leurs silhouettes claires apparaissaient sur fond bleu.|Pose trois feuilles sur le papier, puis appuie sur « Exposer ». Le papier reste clair sous les feuilles.|Des feuilles sur du papier bleu",
+    "Le même rose, une autre impression|Sonia Delaunay créait des peintures, des tissus, des vêtements et des objets pour la maison. Elle explorait les relations entre les couleurs : une même teinte peut sembler différente selon ce qui l’entoure.|Change la couleur autour du rose. Le rose reste identique. Sur quel fond te semble-t-il le plus lumineux ?|Des cercles colorés et des bandes de tissu",
+    "Un motif pour tout un mur|Mathilde Flögl dessinait notamment des papiers peints, des textiles et des livres pour la Wiener Werkstätte. Sur un mur, un motif compte autant par sa forme que par sa répétition.|Change l’espace entre les motifs, puis essaie des rangées décalées. Quel papier peint choisirais-tu chez toi ?|Une esquisse de papier peint",
+    "De l’espace entre les couleurs|Alma Thomas composait ses peintures abstraites avec de petites touches de couleur. Le fond clair reste souvent visible entre elles. Ces espaces font autant partie du tableau que la peinture.|Change les espaces entre les touches. Quand la surface paraît-elle calme ou animée ? Choisis l’écart qui te plaît.|Des touches de couleur espacées",
+    "À quoi ressemble une émotion ?|Hilma af Klint composait des images abstraites avec des formes, des couleurs et des signes. Elle cherchait à représenter des forces et des liens invisibles, en s’appuyant notamment sur ses convictions spirituelles.|Choisis une couleur et une forme pour ton humeur du jour. Donne un titre à l’image sans nommer directement cette émotion.|Un carnet de signes",
+    "Un petit motif voyage|Felice Rix-Ueno créait des tissus, des papiers peints et des broderies pour la Wiener Werkstätte. Des formes végétales et des motifs imaginatifs reviennent dans ses dessins. Elle a ensuite vécu et enseigné au Japon.|Choisis une étoile, une plume ou un pompon. Pose ce motif à trois endroits. Souris, doigt ou clavier : tout fonctionne.|Une étoile, une plume et un pompon",
+    "Qu’as-tu remarqué ?|Berthe Morisot peignait des personnes chez elles, dans des jardins ou des parcs. Impressionniste, elle s’intéressait aux changements de lumière et à l’impression fugitive d’une scène.|Regarde ce coin de pièce dessiné. Cache-le, puis réponds à la question de mémoire.|Une fenêtre et la lumière dans une pièce",
+    "Un vase qui a du caractère|Vally Wieselthier travaillait la céramique à Vienne, puis aux États-Unis. Ses récipients et ses figures associent des formes affirmées à un modelage libre et expressif.|Change le corps et l’ouverture du vase. Il n’a pas besoin d’être symétrique. Quelle forme aimerais-tu prendre en main ?|Un vase dessiné librement",
+    "Une carte pour quelqu’un|Mela Koehler dessinait des cartes postales et des images de mode. Sur un petit format, elle réunissait personnages, vêtements et lettres. Elle a réalisé de nombreux dessins pour la Wiener Werkstätte.|Écris un petit mot et choisis une bordure dessinée. Si ta carte te plaît, tu peux la télécharger ou la partager.|Une carte postale illustrée",
+    "Une ligne dans l’espace|Les sculptures en fil métallique de Ruth Asawa sont ajourées : on voit la forme tout en regardant à travers elle. Les boucles dessinent une surface sans fermer l’espace intérieur.|Change le nombre de boucles. Observe comment les espaces entre les fils se transforment.|Une forme en boucles de fil",
+    "Un autoportrait sans miroir|Paula Modersohn-Becker a peint des femmes, des enfants et de nombreux autoportraits, en s’éloignant des représentations idéalisées de son époque. Son visage et son corps sont des sujets récurrents.|Complète les trois phrases. Ne parle ni de ton métier ni de ton apparence. Qu’est-ce qui raconte autre chose de toi ?|Un miroir et une page blanche",
+    "Une forme à déplier|Lygia Clark faisait de la transformation d’une œuvre une part de l’expérience artistique. Dans ses sculptures articulées, la personne qui déplie l’objet participe aussi à sa forme.|Ouvre et ferme les panneaux reliés. Regarde-les de côté et d’en haut. Quelle position te surprend ?|Des panneaux reliés qui se plient",
+    "Relier avec un fil|Pacita Abad associait la peinture aux techniques textiles. Elle cousait, rembourrait et ajoutait des matières à ses toiles peintes, donnant du relief à leur surface.|Relie les morceaux de tissu avec des points. Touche les petites jonctions. Laisse au moins une couture ouverte.|Un morceau de tissu cousu",
+    "Un costume qui se remarque|Maria Likarz-Strauss créait des tissus, de la mode et des imprimés pour la Wiener Werkstätte, dont des costumes de carnaval. Le vêtement était à la fois un objet à porter et un sujet d’image.|Choisis une coiffe, un haut et une jupe pour un costume de papier. Le porterais-tu pour une fête ?|Un costume de papier",
+    "Une pièce dont tu te souviens|Louise Bourgeois revenait aux souvenirs et aux relations dans ses dessins, ses sculptures et ses gravures. Les maisons et les pièces pouvaient évoquer des expériences personnelles.|Choisis les cases pour esquisser le plan d’une pièce familière. Quelles parties te viennent en premier ?|Une maison et un fil",
+    "Une histoire plutôt étrange|Leonora Carrington était peintre et écrivaine. Dans ses images et ses récits, des choses familières côtoient des créatures inventées. Ce qui ne va pas ensemble au quotidien peut y cohabiter tout naturellement.|Choisis trois éléments pour commencer une histoire. Prends la combinaison la plus étrange. Tu n’as pas besoin de l’expliquer.|Une théière en voyage",
+    "Dans quelle tasse boire ?|Jutta Sika créait de la vaisselle et des œuvres graphiques. Le MAK conserve un modèle de tasse et de soucoupe d’après son dessin. Cet objet quotidien permet d’observer le lien entre forme et usage.|Place l’anse à gauche ou à droite et change sa taille. Pense à la façon dont tu tiendrais vraiment la tasse.|Une tasse et sa soucoupe",
+    "Moins de pas dans la cuisine|Margarete Schütte-Lihotzky a conçu la cuisine de Francfort pour de petits logements. Son agencement devait faciliter le travail et raccourcir les déplacements. Le MAK en conserve une reconstitution réalisée avec sa participation.|Réorganise le garde-manger, l’évier, le plan de travail et la cuisinière. Compare le trajet pour prendre, laver, couper et cuire.|Une petite cuisine vue d’en haut",
+    "Un dessin entre dans une pièce|Lotte Calm créait des céramiques, des motifs textiles, des jouets et des peintures murales pour la Wiener Werkstätte. Un motif pouvait apparaître sur un petit objet ou participer à l’ensemble d’une pièce.|Place la branche dessinée au mur, au sol ou au plafond. Où change-t-elle le plus la pièce ?|Une branche comme décor mural",
+    "Du nouveau avec des morceaux|Hannah Höch pratiquait le photomontage et le collage. Elle découpait des images pour les sortir de leur contexte et les assembler autrement, transformant les visages, les corps et leur sens.|Décale les trois bandes de l’image. Trouve une combinaison que tu n’avais pas prévue.|Des morceaux de papier en collage",
+    "Encore un peu plus près|Georgia O’Keeffe peignait souvent des fleurs très agrandies. Un petit détail pouvait occuper presque tout le tableau, attirant l’attention sur les lignes, les courbes et les passages de couleur.|Zoome dans la fleur dessinée. À quel moment ne vois-tu plus une fleur, mais des lignes et des surfaces ?|Un détail de fleur agrandi",
+    "Huit lignes tranquilles|Agnes Martin travaillait avec des lignes fines, des grilles et des couleurs discrètes. Ses tableaux semblent réguliers au premier regard. De près, de petites variations apparaissent dans le tracé.|Trace huit lignes lentement, sans règle. Regarde ensuite leurs petites différences. Tu peux aussi dessiner sur papier.|Des lignes légèrement différentes",
+    "Un lieu pour tout le monde|Niki de Saint Phalle créait des sculptures colorées et de grands ensembles où l’on pouvait entrer. Son art pouvait ainsi se vivre comme un lieu, autant que se regarder comme un objet.|Imagine une petite place publique. Ajoute des sièges, un accès sans marches et un point de rencontre. Qu’est-ce qui compte pour toi ?|Une porte colorée vers une place"
+  ]
 };
-for(const l of ['de','en','fr'])Object.assign(UI[l],CALENDAR_COPY[l]);
 
-Object.assign(UI.de,{whyText:'Künstlerinnen haben unsere Vorstellung von Kunst und Gestaltung verändert. Ihre Arbeit bekam dabei oft weniger Aufmerksamkeit als die ihrer männlichen Kollegen. Dieser Kalender widmet ihnen den Dezember: 24 Positionen aus Malerei, Fotografie, Textil, Architektur und Design.',whyBenefit:'Die Auswahl folgt dem, was diese Arbeiten bis heute interessant macht: der Umgang mit Farbe, Material, Raum und Alltag. Kurze Texte geben Einblick in die Arbeit der Künstlerinnen. In den Aufgaben kannst du einige ihrer gestalterischen Fragen selbst aufgreifen.'});
-Object.assign(UI.en,{whyText:'Women artists have changed how we think about art and design. Their work has often received less attention than that of their male peers. This calendar dedicates December to 24 of them, working across painting, photography, textiles, architecture and design.',whyBenefit:'The selection follows what makes their work compelling today: its approach to colour, materials, space and everyday life. Short texts introduce their work. The activities let you explore some of the questions behind it for yourself.'});
-Object.assign(UI.fr,{whyText:'Les artistes femmes ont transformé notre regard sur l’art et le design. Leur travail a souvent reçu moins d’attention que celui de leurs collègues masculins. Ce calendrier leur consacre le mois de décembre, à travers 24 parcours dans la peinture, la photographie, le textile, l’architecture et le design.',whyBenefit:'Le choix porte sur ce qui rend leurs œuvres toujours intéressantes : leur rapport à la couleur, aux matériaux, à l’espace et au quotidien. De courts textes présentent leur travail. Les activités permettent d’explorer certaines de leurs recherches par la pratique.'});
+const UI = {
+  "de": {
+    "skip": "Zum Inhalt",
+    "nav": "Navigation",
+    "idea": "So geht’s",
+    "post": "Kunstpost",
+    "language": "Sprache",
+    "subtitle": "24 Künstlerinnen. Ein Kunst-Advent von Salon Format.",
+    "intro": "24 Künstlerinnen, kurze Geschichten und kleine Experimente mit Farbe, Form und Raum. Kostenlos und ohne Anmeldung.",
+    "open": "Zum Haus",
+    "dates": "1.–24. Dezember",
+    "preview": "Vorschau: Alle 24 Türen sind offen.",
+    "door": "Tür",
+    "visited": "entdeckt",
+    "houseLabel": "Ein Haus mit 24 Fenstern zum Öffnen",
+    "houseNote": "Ein Haus für 24 Künstlerinnen und deine eigenen Ideen.",
+    "howTitle": "So funktioniert der Kalender",
+    "howText": "Vom 1. bis 24. Dezember wird jeden Tag ein Fenster zugänglich. Die früheren bleiben offen. Hinter jedem Fenster lernst du eine Künstlerin kennen und kannst selbst etwas ausprobieren.",
+    "howIdeas": "Dein Ergebnis gefällt dir? Du kannst es herunterladen oder teilen. Es gibt kein Konto und keine Sammlung. Wenn du das Fenster verlässt, wird dein Ergebnis nicht aufbewahrt.",
+    "postTitle": "Jeden Morgen ein Fenster per E-Mail.",
+    "postText": "Geplant ist eine kurze E-Mail mit einer Künstlerin und dem Link zu ihrem Fenster. Die Anmeldung ist noch nicht freigeschaltet.",
+    "mailButton": "Eine Beispiel-Mail ansehen",
+    "demo": "E-Mail-Anmeldung und Versand sind in dieser Testversion noch nicht aktiv.",
+    "shareTitle": "Wem könnte das auch gefallen?",
+    "shareText": "Kennst du jemanden, dem Kunst und Zeichnen Freude machen? Schick den Kalender mit einem persönlichen Gruß weiter.",
+    "shareButton": "Den Kalender weitergeben",
+    "footer": "Ein Kunst-Advent von",
+    "footerNote": "Eigene digitale Zeichnungen · 2026",
+    "back": "Zurück zum Haus",
+    "source": "Mehr dazu bei",
+    "original": "Eigene Zeichnung zum Thema – kein Werk der Künstlerin.",
+    "reset": "Noch einmal anfangen",
+    "needInput": "Probier zuerst etwas aus oder schreib ein paar Worte.",
+    "next": "Nächste Tür",
+    "previous": "Vorige Tür",
+    "download": "Herunterladen",
+    "mailTitle": "So könnte die Kunstpost aussehen.",
+    "mailDate": "1. Dezember · Tür 1",
+    "mailSubject": "Heute: ein paar Formen und Sophie Taeuber-Arp.",
+    "hello": "Guten Morgen,",
+    "mailText": "Sophie Taeuber-Arp hat Teppiche, Marionetten und ganze Räume gestaltet. Heute probieren wir aus, wie aus einfachen Formen ein Rhythmus wird. Hast du zwei Minuten?",
+    "mailEnd": "Bis morgen,",
+    "mailUnsubscribe": "In der echten E-Mail kannst du dich hier jederzeit abmelden.",
+    "mailFlow": "Geplant: Adresse eintragen, Anmeldung per Link bestätigen und vom 1. bis 24. Dezember täglich eine neue Tür bekommen. Du kannst den Kalender auch ohne E-Mails nutzen.",
+    "shareHeading": "Ein kleiner Gruß und 24 Türen.",
+    "greeting": "Deine Nachricht",
+    "defaultGreeting": "Ich habe diesen kostenlosen Kunst-Adventskalender entdeckt und musste an dich denken. Jeden Tag eine Künstlerin und ein kleines Experiment. Vielleicht hast du Lust mitzumachen?",
+    "copy": "Gruß und Link kopieren",
+    "copyNote": "Es wird nichts verschickt. Du fügst den Text selbst in eine Nachricht ein.",
+    "copied": "Kopiert. Du kannst den Text jetzt in deine Nachricht einfügen.",
+    "copyFallback": "Bitte kopiere den markierten Text mit der Kopierfunktion deines Geräts.",
+    "makCollection": "In der MAK-Sammlung. Ob das Objekt gerade zu sehen ist, steht auf der Museumsseite.",
+    "makPast": "MAK-Bezug: eine frühere Ausstellung, keine Angabe zur aktuellen Präsentation.",
+    "makCurrent": "MAK: „Vally Wieselthier. Bild und Ton“, 29.4.2026–10.1.2027. Besuchsinformationen bitte beim Museum prüfen.",
+    "independent": "Unabhängiger Entwurf von Salon Format. Kein Auftrag und keine Kooperation mit dem MAK.",
+    "directory": "Die Künstlerinnen – mit Quellen",
+    "directoryNote": "Hier kannst du die Namen schon nachlesen. Die Experimente bleiben hinter den Fenstern.",
+    "choose": "Auswählen",
+    "spacing": "Abstand",
+    "offset": "Versetzte Reihen",
+    "expose": "Belichten",
+    "leaf": "Blatt hinzufügen",
+    "reveal": "Bild wieder ansehen",
+    "hide": "Bild ausblenden",
+    "memoryQuestion": "Was stand auf dem Tisch?",
+    "correct": "Genau, eine Zitrone. Schau gern noch einmal hin.",
+    "incorrect": "Es war eine Zitrone. Schau noch einmal ins Bild.",
+    "belly": "Bauch",
+    "opening": "Öffnung",
+    "asymmetry": "Asymmetrie",
+    "border": "Rand",
+    "greetingPlaceholder": "Ein kleiner Gruß …",
+    "loops": "Schlaufen",
+    "fold": "Aufklappen",
+    "view": "Ansicht",
+    "side": "Seitlich",
+    "above": "Von oben",
+    "stitch": "Naht",
+    "head": "Kopfform",
+    "top": "Oberteil",
+    "skirt": "Rock",
+    "room": "Raumfeld",
+    "handle": "Henkel",
+    "left": "Links",
+    "right": "Rechts",
+    "size": "Größe",
+    "route": "Weglänge",
+    "steps": "Einheiten",
+    "wall": "Wand",
+    "floor": "Boden",
+    "ceiling": "Decke",
+    "strip": "Bildstreifen",
+    "zoom": "Vergrößern",
+    "lines": "Linien",
+    "drawing": "Zeichenfläche: mit Maus oder Finger zeichnen. Papier geht natürlich auch.",
+    "seating": "Sitzplätze",
+    "access": "Zugang ohne Stufen",
+    "meeting": "Treffpunkt",
+    "namePicture": "Ein Name für dein Bild",
+    "moodShape": "Form",
+    "stamp": "Motiv setzen",
+    "turn": "Form drehen",
+    "moveLeft": "Nach links",
+    "moveRight": "Nach rechts",
+    "resultShare": "Ergebnis teilen",
+    "noStorage": "Wenn du dein Ergebnis behalten möchtest, kannst du es herunterladen oder teilen. Hier wird nichts gespeichert.",
+    "shareFallback": "Lade dein Bild herunter und verschicke es mit einer App deiner Wahl. Den Link zu diesem Fenster kannst du hier kopieren.",
+    "copyTask": "Link zu diesem Fenster kopieren",
+    "shareResultText": "Mein kleines Experiment zu",
+    "resetNote": "Wenn du dieses Fenster verlässt, wird dein Ergebnis verworfen.",
+    "calendar": "Zum Kalender",
+    "before": "Ab 1. Dezember täglich ein neues Atelier.",
+    "during": "Die bisherigen Tage bleiben für dich offen.",
+    "closed": "Noch geschlossen",
+    "available": "Öffnen",
+    "previewMode": "Testvorschau",
+    "previewLabel": "Tag im Dezember",
+    "previewExit": "Vorschau beenden",
+    "previewEnter": "Kalender vorab testen",
+    "lockedTitle": "Dieses Fenster ist noch zu.",
+    "lockedText": "Es öffnet sich am {day}. Dezember. Bis dahin kannst du die bisherigen Tage besuchen.",
+    "whyTitle": "Über den Kalender",
+    "whyText": "24 Künstlerinnen, die mit Farbe, Formen, Stoff und Raum gearbeitet haben. Jeden Tag lernst du eine von ihnen näher kennen – mit einer kurzen Geschichte, einem kleinen Experiment und Links zu den Museen.",
+    "whyBenefit": "Du kannst Farben vergleichen, Formen verändern oder selbst zeichnen. Dabei merkst du direkt, was sich verändert. Du brauchst keine Vorkenntnisse und kannst so lange bleiben, wie du magst.",
+    "sources": "Quellen & weiterlesen",
+    "rights": "Die Museumslinks führen zu den Quellen unserer Texte. Für Bilder und Texte auf diesen Seiten gelten die jeweiligen Nutzungsbedingungen. Die Zeichnungen und Experimente hier wurden für diesen Kalender erstellt.",
+    "openToday": "Das heutige Fenster öffnen",
+    "coverNote": "1.–24. Dezember · Kostenlos · Ohne Anmeldung",
+    "sceneHint": "Wähle ein Fenster. Die Nummern führen dich durch den Dezember.",
+    "pauseMotion": "Bewegung pausieren",
+    "resumeMotion": "Bewegung einschalten",
+    "soundOn": "Ton einschalten",
+    "soundOff": "Ton ausschalten",
+    "roomLabel": "Atelier",
+    "entering": "Das Atelier öffnet sich …"
+  },
+  "en": {
+    "skip": "Skip to content",
+    "nav": "Navigation",
+    "idea": "How it works",
+    "post": "Art by email",
+    "language": "Language",
+    "subtitle": "24 women artists. An art Advent calendar by Salon Format.",
+    "intro": "24 women artists, short stories and small experiments with colour, shape and space. Free, with no sign-up.",
+    "open": "Go to the house",
+    "dates": "1–24 December",
+    "preview": "Preview: all 24 doors are open.",
+    "door": "Door",
+    "visited": "discovered",
+    "houseLabel": "One house with 24 windows to open",
+    "houseNote": "A little Paris, Brussels and Vienna. And room for your ideas.",
+    "howTitle": "How the calendar works",
+    "howText": "A new window becomes available every day from 1 to 24 December. Earlier windows stay open. Meet an artist behind each one and try something yourself.",
+    "howIdeas": "Like what you made? Download or share it. There is no account or collection. Your result is discarded when you leave this window.",
+    "postTitle": "A window in your inbox each morning.",
+    "postText": "Planned: a short email introducing an artist and linking to her window. Sign-up is not open yet.",
+    "mailButton": "See an example email",
+    "demo": "Email sign-up and sending are not connected in this test version.",
+    "shareTitle": "Who else might enjoy this?",
+    "shareText": "Know someone who enjoys art and drawing? Send them the calendar with a personal note.",
+    "shareButton": "Share the calendar",
+    "footer": "An art Advent calendar by",
+    "footerNote": "Original digital drawings · 2026",
+    "back": "Back to the house",
+    "source": "Find out more at",
+    "original": "An original drawing about the subject, not a work by the artist.",
+    "reset": "Start again",
+    "needInput": "Try something first, or write a few words.",
+    "next": "Next door",
+    "previous": "Previous door",
+    "download": "Download",
+    "mailTitle": "Here is an example of the art email.",
+    "mailDate": "1 December · Door 1",
+    "mailSubject": "Today: a few shapes and Sophie Taeuber-Arp.",
+    "hello": "Good morning,",
+    "mailText": "Sophie Taeuber-Arp designed rugs, puppets and entire rooms. Today we are trying out how simple shapes can make a rhythm. Got two minutes?",
+    "mailEnd": "See you tomorrow,",
+    "mailUnsubscribe": "The real email will have a link here to unsubscribe at any time.",
+    "mailFlow": "Planned: enter your email, confirm through a link and get a new door each day from 1 to 24 December. You can also use the calendar without emails.",
+    "shareHeading": "A little message and 24 doors.",
+    "greeting": "Your message",
+    "defaultGreeting": "I found this free art Advent calendar and thought of you. A woman artist and a small experiment every day. Fancy joining in?",
+    "copy": "Copy message and link",
+    "copyNote": "Nothing is sent. Paste the text into a message yourself.",
+    "copied": "Copied. You can paste it into your message now.",
+    "copyFallback": "Please copy the selected text using your device’s copy command.",
+    "makCollection": "In the MAK collection. Check the museum page to see whether the object is currently on display.",
+    "makPast": "MAK connection: a past exhibition, not a current display listing.",
+    "makCurrent": "MAK: “Vally Wieselthier. Bild und Ton”, 29 April 2026–10 January 2027. Check visiting details with the museum.",
+    "independent": "An independent Salon Format concept. Not commissioned by or made in partnership with the MAK.",
+    "directory": "The artists — with sources",
+    "directoryNote": "You can read the names here in advance. The experiments stay behind the windows.",
+    "choose": "Choose",
+    "spacing": "Spacing",
+    "offset": "Staggered rows",
+    "expose": "Expose",
+    "leaf": "Add a leaf",
+    "reveal": "Show the picture again",
+    "hide": "Hide the picture",
+    "memoryQuestion": "What was on the table?",
+    "correct": "Yes, a lemon. Have another look if you like.",
+    "incorrect": "It was a lemon. Take another look at the picture.",
+    "belly": "Body",
+    "opening": "Opening",
+    "asymmetry": "Asymmetry",
+    "border": "Border",
+    "greetingPlaceholder": "A little message …",
+    "loops": "Loops",
+    "fold": "Unfold",
+    "view": "View",
+    "side": "From the side",
+    "above": "From above",
+    "stitch": "Seam",
+    "head": "Headpiece",
+    "top": "Top",
+    "skirt": "Skirt",
+    "room": "Room square",
+    "handle": "Handle",
+    "left": "Left",
+    "right": "Right",
+    "size": "Size",
+    "route": "Route length",
+    "steps": "units",
+    "wall": "Wall",
+    "floor": "Floor",
+    "ceiling": "Ceiling",
+    "strip": "Picture strip",
+    "zoom": "Zoom",
+    "lines": "Lines",
+    "drawing": "Drawing area: use your mouse or finger. Paper works too.",
+    "seating": "Seating",
+    "access": "Step-free access",
+    "meeting": "Meeting point",
+    "namePicture": "A name for your picture",
+    "moodShape": "Shape",
+    "stamp": "Place a motif",
+    "turn": "Turn shape",
+    "moveLeft": "Move left",
+    "moveRight": "Move right",
+    "resultShare": "Share your result",
+    "noStorage": "Keep your result by downloading or sharing it. Nothing is stored here.",
+    "shareFallback": "Download your picture and send it through an app of your choice. You can also copy this window’s link here.",
+    "copyTask": "Copy this window’s link",
+    "shareResultText": "My little experiment about",
+    "resetNote": "Your result is discarded when you leave this window.",
+    "calendar": "Back to the calendar",
+    "before": "A new atelier each day from 1 December.",
+    "during": "Earlier days remain open for you.",
+    "closed": "Not open yet",
+    "available": "Open",
+    "previewMode": "Test preview",
+    "previewLabel": "Day in December",
+    "previewExit": "Leave preview",
+    "previewEnter": "Try the calendar early",
+    "lockedTitle": "This window is still closed.",
+    "lockedText": "It opens on {day} December. You can visit the earlier days while you wait.",
+    "whyTitle": "About the calendar",
+    "whyText": "24 women artists who worked with colour, shape, textiles and space. Get to know one each day through a short story, a small experiment and links to museums.",
+    "whyBenefit": "Compare colours, change shapes or draw for yourself, and see what changes as you go. No background knowledge is needed. Stay as long as you like.",
+    "sources": "Sources & further reading",
+    "rights": "The museum links lead to the sources for our texts. Images and texts on those pages have their own terms of use. The drawings and experiments here were created for this calendar.",
+    "openToday": "Open today’s window",
+    "coverNote": "1–24 December · Free · No sign-up",
+    "sceneHint": "Choose a window. The numbers take you through December.",
+    "pauseMotion": "Pause motion",
+    "resumeMotion": "Turn motion on",
+    "soundOn": "Turn sound on",
+    "soundOff": "Turn sound off",
+    "roomLabel": "Atelier",
+    "entering": "The atelier is opening …"
+  },
+  "fr": {
+    "skip": "Aller au contenu",
+    "nav": "Navigation",
+    "idea": "Comment ça marche",
+    "post": "La lettre d’art",
+    "language": "Langue",
+    "subtitle": "24 artistes femmes. Un calendrier de l’Avent par Salon Format.",
+    "intro": "24 artistes, des histoires courtes et de petites expériences avec la couleur, les formes et l’espace. Gratuit et sans inscription.",
+    "open": "Voir la maison",
+    "dates": "Du 1er au 24 décembre",
+    "preview": "Aperçu : les 24 portes sont ouvertes.",
+    "door": "Porte",
+    "visited": "découvertes",
+    "houseLabel": "Une maison avec 24 fenêtres à ouvrir",
+    "houseNote": "Un peu de Paris, de Bruxelles et de Vienne. Et de la place pour tes idées.",
+    "howTitle": "Comment fonctionne le calendrier",
+    "howText": "Une nouvelle fenêtre s’ouvre chaque jour du 1er au 24 décembre. Les précédentes restent accessibles. Derrière chacune, découvre une artiste et essaie quelque chose à ton tour.",
+    "howIdeas": "Ton résultat te plaît ? Télécharge-le ou partage-le. Il n’y a ni compte ni collection. Ton résultat disparaît quand tu quittes cette fenêtre.",
+    "postTitle": "Une fenêtre dans ta boîte mail chaque matin.",
+    "postText": "Prévu : un court mail pour découvrir une artiste et accéder à sa fenêtre. L’inscription n’est pas encore ouverte.",
+    "mailButton": "Voir un exemple de mail",
+    "demo": "L’inscription et l’envoi des mails ne sont pas encore actifs dans cette version test.",
+    "shareTitle": "À qui ça pourrait plaire aussi ?",
+    "shareText": "Tu connais quelqu’un qui aime l’art et le dessin ? Envoie-lui le calendrier avec un petit mot personnel.",
+    "shareButton": "Partager le calendrier",
+    "footer": "Un calendrier de l’Avent artistique par",
+    "footerNote": "Dessins numériques originaux · 2026",
+    "back": "Retour à la maison",
+    "source": "En savoir plus auprès de",
+    "original": "Un dessin original sur le sujet, pas une œuvre de l’artiste.",
+    "reset": "Recommencer",
+    "needInput": "Essaie d’abord quelque chose ou écris quelques mots.",
+    "next": "Porte suivante",
+    "previous": "Porte précédente",
+    "download": "Télécharger",
+    "mailTitle": "Voici un exemple de la lettre d’art.",
+    "mailDate": "1er décembre · Porte 1",
+    "mailSubject": "Aujourd’hui : quelques formes et Sophie Taeuber-Arp.",
+    "hello": "Bonjour,",
+    "mailText": "Sophie Taeuber-Arp a créé des tapis, des marionnettes et des pièces entières. Aujourd’hui, on essaie de trouver un rythme avec des formes simples. Tu as deux minutes ?",
+    "mailEnd": "À demain,",
+    "mailUnsubscribe": "Le vrai mail proposera ici un lien pour te désinscrire à tout moment.",
+    "mailFlow": "Prévu : tu saisis ton adresse, tu confirmes par un lien et tu reçois une porte par jour du 1er au 24 décembre. Tu peux aussi utiliser le calendrier sans les mails.",
+    "shareHeading": "Un petit mot et 24 portes.",
+    "greeting": "Ton message",
+    "defaultGreeting": "J’ai découvert ce calendrier de l’Avent artistique gratuit et j’ai pensé à toi. Chaque jour, une artiste et une petite expérience. Ça te dit de participer ?",
+    "copy": "Copier le message et le lien",
+    "copyNote": "Rien n’est envoyé. Tu colles toi-même le texte dans un message.",
+    "copied": "Copié. Tu peux maintenant le coller dans ton message.",
+    "copyFallback": "Copie le texte sélectionné avec la commande de ton appareil.",
+    "makCollection": "Dans la collection du MAK. La page du musée indique si l’objet est actuellement exposé.",
+    "makPast": "Lien avec le MAK : une exposition passée, pas une présentation actuelle.",
+    "makCurrent": "MAK : « Vally Wieselthier. Bild und Ton », du 29 avril 2026 au 10 janvier 2027. Vérifie les informations de visite auprès du musée.",
+    "independent": "Un projet indépendant de Salon Format. Ni une commande ni une collaboration avec le MAK.",
+    "directory": "Les artistes et les sources",
+    "directoryNote": "Tu peux déjà lire les noms ici. Les expériences restent derrière les fenêtres.",
+    "choose": "Choisir",
+    "spacing": "Espacement",
+    "offset": "Rangées décalées",
+    "expose": "Exposer",
+    "leaf": "Ajouter une feuille",
+    "reveal": "Revoir l’image",
+    "hide": "Cacher l’image",
+    "memoryQuestion": "Qu’y avait-il sur la table ?",
+    "correct": "Oui, un citron. Tu peux regarder encore.",
+    "incorrect": "C’était un citron. Regarde à nouveau l’image.",
+    "belly": "Corps",
+    "opening": "Ouverture",
+    "asymmetry": "Asymétrie",
+    "border": "Bordure",
+    "greetingPlaceholder": "Un petit mot…",
+    "loops": "Boucles",
+    "fold": "Déplier",
+    "view": "Vue",
+    "side": "De côté",
+    "above": "D’en haut",
+    "stitch": "Couture",
+    "head": "Coiffe",
+    "top": "Haut",
+    "skirt": "Jupe",
+    "room": "Case de la pièce",
+    "handle": "Anse",
+    "left": "À gauche",
+    "right": "À droite",
+    "size": "Taille",
+    "route": "Longueur du trajet",
+    "steps": "unités",
+    "wall": "Mur",
+    "floor": "Sol",
+    "ceiling": "Plafond",
+    "strip": "Bande de l’image",
+    "zoom": "Agrandir",
+    "lines": "Lignes",
+    "drawing": "Zone de dessin : souris ou doigt. Tu peux aussi utiliser du papier.",
+    "seating": "Des sièges",
+    "access": "Accès sans marches",
+    "meeting": "Un point de rencontre",
+    "namePicture": "Un titre pour ton image",
+    "moodShape": "Forme",
+    "stamp": "Poser un motif",
+    "turn": "Tourner la forme",
+    "moveLeft": "Vers la gauche",
+    "moveRight": "Vers la droite",
+    "resultShare": "Partager ton résultat",
+    "noStorage": "Tu peux télécharger ou partager ton résultat pour le garder. Rien n’est enregistré ici.",
+    "shareFallback": "Télécharge ton image et envoie-la avec l’application de ton choix. Tu peux aussi copier le lien de cette fenêtre ici.",
+    "copyTask": "Copier le lien de cette fenêtre",
+    "shareResultText": "Ma petite expérience autour de",
+    "resetNote": "Ton résultat disparaît quand tu quittes cette fenêtre.",
+    "calendar": "Retour au calendrier",
+    "before": "Un nouvel atelier par jour dès le 1er décembre.",
+    "during": "Les jours précédents restent ouverts.",
+    "closed": "Encore fermée",
+    "available": "Ouvrir",
+    "previewMode": "Aperçu de test",
+    "previewLabel": "Jour de décembre",
+    "previewExit": "Quitter l’aperçu",
+    "previewEnter": "Tester le calendrier en avance",
+    "lockedTitle": "Cette fenêtre est encore fermée.",
+    "lockedText": "Elle s’ouvrira le {day} décembre. En attendant, tu peux retrouver les jours précédents.",
+    "whyTitle": "À propos du calendrier",
+    "whyText": "24 artistes qui ont travaillé la couleur, les formes, le textile et l’espace. Chaque jour, découvre l’une d’elles à travers une histoire courte, une petite expérience et des liens vers les musées.",
+    "whyBenefit": "Compare des couleurs, transforme des formes ou dessine, puis observe ce qui change. Tu n’as pas besoin de connaissances particulières et tu peux prendre ton temps.",
+    "sources": "Sources et lectures",
+    "rights": "Les liens vers les musées renvoient aux sources de nos textes. Les images et les textes de ces pages ont leurs propres conditions d’utilisation. Les dessins et les expériences présentés ici ont été créés pour ce calendrier.",
+    "openToday": "Ouvrir la fenêtre du jour",
+    "coverNote": "Du 1er au 24 décembre · Gratuit · Sans inscription",
+    "sceneHint": "Choisis une fenêtre. Les numéros te guident au fil de décembre.",
+    "pauseMotion": "Mettre en pause",
+    "resumeMotion": "Activer le mouvement",
+    "soundOn": "Activer le son",
+    "soundOff": "Couper le son",
+    "roomLabel": "Atelier",
+    "entering": "L’atelier s’ouvre …"
+  }
+};
 
-const EXPERIENCE_COPY={
-de:{subtitle:'Ein Adventskalender mit 24 Künstlerinnen.',intro:'Im Dezember gehört jeden Tag ein Atelier dir. Lerne eine Künstlerin kennen und probier eine ihrer Ideen selbst aus.',openToday:'Das heutige Fenster öffnen',coverNote:'1.–24. Dezember · Kostenlos · Ohne Anmeldung',sceneHint:'Wähle ein Fenster. Die Nummern führen dich durch den Dezember.',pauseMotion:'Bewegung pausieren',resumeMotion:'Bewegung einschalten',soundOn:'Ton einschalten',soundOff:'Ton ausschalten',roomLabel:'Atelier',entering:'Das Atelier öffnet sich …',before:'Ab 1. Dezember täglich ein neues Atelier.',during:'Die bisherigen Tage bleiben für dich offen.'},
-en:{subtitle:'An Advent calendar with 24 women artists.',intro:'An atelier for you, every day in December. Meet an artist and try out one of her ideas yourself.',openToday:'Open today’s window',coverNote:'1–24 December · Free · No sign-up',sceneHint:'Choose a window. The numbers take you through December.',pauseMotion:'Pause motion',resumeMotion:'Turn motion on',soundOn:'Turn sound on',soundOff:'Turn sound off',roomLabel:'Atelier',entering:'The atelier is opening …',before:'A new atelier each day from 1 December.',during:'Earlier days remain open for you.'},
-fr:{subtitle:'Un calendrier de l’Avent avec 24 artistes femmes.',intro:'En décembre, un atelier vous attend chaque jour. Découvrez une artiste et explorez l’une de ses idées à votre tour.',openToday:'Ouvrir la fenêtre du jour',coverNote:'Du 1er au 24 décembre · Gratuit · Sans inscription',sceneHint:'Choisissez une fenêtre. Les numéros vous guident au fil de décembre.',pauseMotion:'Mettre en pause',resumeMotion:'Activer le mouvement',soundOn:'Activer le son',soundOff:'Couper le son',roomLabel:'Atelier',entering:'L’atelier s’ouvre …',before:'Un nouvel atelier par jour dès le 1er décembre.',during:'Les jours précédents restent ouverts.'}};
-for(const l of ['de','en','fr'])Object.assign(UI[l],EXPERIENCE_COPY[l]);
-Object.assign(UI.de,{whyTitle:'Über den Kalender',whyText:'Atelier des possibles begleitet dich durch den Dezember. Hinter den 24 Fenstern stehen Künstlerinnen, die mit Farbe, Material und Raum ganz eigene Wege gegangen sind – von Sophie Taeuber-Arp bis Ruth Asawa.',whyBenefit:'Zu jeder Künstlerin gibt es einen kurzen Text, Quellen zum Weiterlesen und eine eigene kleine Aufgabe. Du kannst Formen drehen, mit Farben arbeiten oder selbst zeichnen. Ein paar Minuten genügen; Vorwissen brauchst du keines.'});
-Object.assign(UI.en,{whyTitle:'About the calendar',whyText:'Atelier des possibles accompanies you through December. Behind its 24 windows are women artists who found their own ways of working with colour, materials and space, from Sophie Taeuber-Arp to Ruth Asawa.',whyBenefit:'Each artist comes with a short introduction, sources for further reading and a different activity. Rotate shapes, work with colours or make a drawing. A few minutes are enough; no prior knowledge is needed.'});
-Object.assign(UI.fr,{whyTitle:'À propos du calendrier',whyText:'Atelier des possibles vous accompagne en décembre. Derrière les 24 fenêtres, des artistes femmes qui ont exploré à leur manière la couleur, les matériaux et l’espace, de Sophie Taeuber-Arp à Ruth Asawa.',whyBenefit:'Chaque artiste est présentée dans un court texte, avec des sources pour aller plus loin et une activité différente. Faites pivoter des formes, jouez avec les couleurs ou dessinez. Quelques minutes suffisent, sans connaissances préalables.'});
+const OPTIONS = {
+  "de": {
+    "colors": [
+      "Blau",
+      "Rot",
+      "Grün",
+      "Rosa",
+      "Gold",
+      "Tuschschwarz"
+    ],
+    "shapes": [
+      "Kreis",
+      "Dreieck",
+      "Bogen"
+    ],
+    "motifs": [
+      "Stern",
+      "Feder",
+      "Quaste"
+    ],
+    "memory": [
+      "Eine Zitrone",
+      "Ein Schuh",
+      "Ein Buch"
+    ],
+    "starts": [
+      "Ich mag …",
+      "Ich denke oft an …",
+      "Ich möchte …"
+    ],
+    "kitchen": [
+      "Vorrat",
+      "Spüle",
+      "Arbeitsfläche",
+      "Herd"
+    ],
+    "story": [
+      [
+        "Eine Teekanne",
+        "Ein Vogel",
+        "Ein Handschuh"
+      ],
+      [
+        "träumt von",
+        "versteckt",
+        "besucht"
+      ],
+      [
+        "einem Wintergarten",
+        "dem Mond",
+        "einem sprechenden Stuhl"
+      ]
+    ]
+  },
+  "en": {
+    "colors": [
+      "Blue",
+      "Red",
+      "Green",
+      "Pink",
+      "Gold",
+      "Ink black"
+    ],
+    "shapes": [
+      "Circle",
+      "Triangle",
+      "Arch"
+    ],
+    "motifs": [
+      "Star",
+      "Feather",
+      "Tassel"
+    ],
+    "memory": [
+      "A lemon",
+      "A shoe",
+      "A book"
+    ],
+    "starts": [
+      "I enjoy …",
+      "I often think about …",
+      "I would like …"
+    ],
+    "kitchen": [
+      "Pantry",
+      "Sink",
+      "Worktop",
+      "Cooker"
+    ],
+    "story": [
+      [
+        "A teapot",
+        "A bird",
+        "A glove"
+      ],
+      [
+        "dreams of",
+        "hides",
+        "visits"
+      ],
+      [
+        "a winter garden",
+        "the moon",
+        "a talking chair"
+      ]
+    ]
+  },
+  "fr": {
+    "colors": [
+      "Bleu",
+      "Rouge",
+      "Vert",
+      "Rose",
+      "Or",
+      "Noir encre"
+    ],
+    "shapes": [
+      "Cercle",
+      "Triangle",
+      "Arche"
+    ],
+    "motifs": [
+      "Étoile",
+      "Plume",
+      "Pompon"
+    ],
+    "memory": [
+      "Un citron",
+      "Une chaussure",
+      "Un livre"
+    ],
+    "starts": [
+      "J’aime…",
+      "Je pense souvent à…",
+      "J’aimerais…"
+    ],
+    "kitchen": [
+      "Réserve",
+      "Évier",
+      "Plan de travail",
+      "Cuisinière"
+    ],
+    "story": [
+      [
+        "Une théière",
+        "Un oiseau",
+        "Un gant"
+      ],
+      [
+        "rêve de",
+        "cache",
+        "rend visite à"
+      ],
+      [
+        "un jardin d’hiver",
+        "la lune",
+        "une chaise qui parle"
+      ]
+    ]
+  }
+};
 
-Object.assign(UI.fr,{intro:'En décembre, un atelier t’attend chaque jour. Découvre une artiste et explore l’une de ses idées à ton tour.',whyText:'Atelier des possibles t’accompagne en décembre. Derrière les 24 fenêtres, des artistes femmes qui ont exploré à leur manière la couleur, les matériaux et l’espace, de Sophie Taeuber-Arp à Ruth Asawa.',whyBenefit:'Chaque artiste est présentée dans un court texte, avec des sources pour aller plus loin et une activité différente. Tu peux faire pivoter des formes, travailler les couleurs ou dessiner. Quelques minutes suffisent, sans connaissances préalables.',sceneHint:'Choisis une fenêtre. Les numéros te guident au fil de décembre.',during:'Les jours précédents restent ouverts.',lockedText:'Elle s’ouvrira le {day} décembre. En attendant, tu peux retrouver les jours précédents.'});
-Object.assign(UI.de,{intro:'Jeden Tag im Advent eine Künstlerin, eine kurze Geschichte und eine kleine Idee zum Ausprobieren. Du entscheidest, wie lange du bleibst.',yourTurn:'Dein Atelier',houseNote:'Ein Haus für 24 Künstlerinnen und deine eigenen Ideen.',howText:'Vom 1. bis 24. Dezember wird jeden Tag ein Fenster zugänglich. Frühere Tage bleiben offen. Dahinter findest du einen kurzen Text zur Künstlerin und eine eigene kleine Aufgabe.',noStorage:'Wenn du dein Ergebnis behalten möchtest, kannst du es herunterladen oder teilen. Hier wird nichts gespeichert.'});
-Object.assign(UI.en,{intro:'An artist, a short story and a small idea to try each day in Advent. Stay for as long as you like.',yourTurn:'Your atelier',howText:'A new window becomes available each day from 1 to 24 December. Earlier days stay open. Each holds a short introduction to an artist and a different activity.',noStorage:'Keep your result by downloading or sharing it. Nothing is stored here.'});
-Object.assign(UI.fr,{intro:'Chaque jour de l’Avent, une artiste, une courte histoire et une idée à essayer. Tu restes le temps que tu veux.',yourTurn:'Ton atelier',howText:'Du 1er au 24 décembre, une nouvelle fenêtre devient accessible chaque jour. Les jours précédents restent ouverts. Chacune propose un court texte sur une artiste et une activité différente.',noStorage:'Tu peux télécharger ou partager ton résultat pour le garder. Rien n’est enregistré ici.'});
-Object.assign(UI.de,{subtitle:'24 Künstlerinnen. Ein Kunst-Advent von Salon Format.'});
-Object.assign(UI.en,{subtitle:'24 women artists. An art Advent calendar by Salon Format.'});
-Object.assign(UI.fr,{subtitle:'24 artistes femmes. Un calendrier de l’Avent par Salon Format.'});
-
-// Original editorial additions, verified against the linked museum sources, 8 November 2026.
-const ARTIST_DETAILS=[
+const ARTIST_DETAILS = [
   {
     "de": "1918 entwarf sie Marionetten für das Stück „König Hirsch“. Auch die Figuren setzte sie aus klaren, geometrischen Formen zusammen.",
     "en": "In 1918 she designed marionettes for the play King Stag, building the figures from clear geometric shapes.",
@@ -220,11 +756,11 @@ const ARTIST_DETAILS=[
     "museum": "MoMA"
   },
   {
-    "de": "Bei ihren „Trapunto“-Bildern bemalte, nähte und polsterte sie die Leinwand. Die Oberfläche blieb dadurch nicht flach, sondern bekam Volumen.",
-    "en": "For her trapunto paintings she painted, stitched and padded the canvas, giving its surface physical depth.",
-    "fr": "Pour ses peintures trapunto, elle peignait, cousait et rembourrait la toile. La surface prenait ainsi du volume.",
-    "url": "https://www.walkerart.org/collections/artist/pacita-abad/",
-    "museum": "Walker Art Center"
+    "de": "2004 bemalte sie die Alkaff-Brücke in Singapur mit mehr als 2.000 Kreisen in 55 Farben. Ihre Kunst war damit auch draußen im Alltag zu erleben.",
+    "en": "In 2004 she painted Singapore’s Alkaff Bridge with more than 2,000 circles in 55 colours, bringing her art into everyday public life.",
+    "fr": "En 2004, elle a peint le pont Alkaff à Singapour avec plus de 2 000 cercles en 55 couleurs, faisant entrer son art dans la vie quotidienne.",
+    "url": "https://americanart.si.edu/artist/pacita-abad-7121",
+    "museum": "Smithsonian American Art Museum"
   },
   {
     "de": "Für die Mappe „Mode Wien 1914/5“ entwarf und druckte sie Modebilder als Linolschnitte. Kleidung wurde bei ihr also auch zum grafischen Motiv auf Papier.",
@@ -297,3 +833,128 @@ const ARTIST_DETAILS=[
     "museum": "MoMA"
   }
 ];
+
+const ARTIST_OBSERVATIONS = [
+  [
+    "Schon eine gedrehte Form unterbricht die Wiederholung. Die übrigen Formen machen diesen Unterschied erst sichtbar.",
+    "One rotated shape can interrupt the repetition. The surrounding shapes make that difference stand out.",
+    "Une seule forme tournée peut interrompre la répétition. Les formes autour d’elle rendent cette différence visible."
+  ],
+  [
+    "Beim Belichten werden die abgedeckten Stellen nicht blau. Die Pflanzen hinterlassen ihren Abdruck, ohne dass eine Kamera nötig ist.",
+    "Covered areas stay pale during exposure. The plants leave an impression without a camera.",
+    "À l’exposition, les zones couvertes restent claires. Les plantes laissent une empreinte sans appareil photo."
+  ],
+  [
+    "Das Rosa bleibt gleich. Was sich ändert, ist die Farbe daneben und damit dein Eindruck vom Rosa.",
+    "The pink itself stays the same. Its neighbouring colour changes, and with it your impression of the pink.",
+    "Le rose reste le même. La couleur voisine change, et avec elle ta perception du rose."
+  ],
+  [
+    "Der Abstand und die versetzten Reihen ändern den Rhythmus des Musters, obwohl das einzelne Motiv gleich bleibt.",
+    "Spacing and staggered rows change the pattern’s rhythm, even though the motif itself stays the same.",
+    "L’espacement et le décalage des rangées changent le rythme du motif, même si sa forme reste identique."
+  ],
+  [
+    "Mit größeren Lücken wird mehr vom hellen Grund sichtbar. Bei kleinen Lücken verbinden sich die Farbstriche stärker zu einer Fläche.",
+    "Larger gaps reveal more of the pale ground. Smaller gaps make the strokes read more as one surface.",
+    "De grands espaces laissent voir davantage le fond clair. Des espaces plus petits réunissent les touches en une surface."
+  ],
+  [
+    "Farbe, Form und Titel können zusammenpassen oder Verschiedenes ausdrücken. Hier bestimmst du selbst, wofür deine Zeichen stehen.",
+    "Colour, shape and title can agree or suggest different things. Here you decide what your signs stand for.",
+    "Couleur, forme et titre peuvent s’accorder ou suggérer des choses différentes. Ici, c’est toi qui choisis le sens de tes signes."
+  ],
+  [
+    "Dasselbe Motiv wirkt anders, wenn du es bündelst oder über die Fläche verteilst. So wird aus einem kleinen Zeichen eine Komposition.",
+    "The same motif looks different when clustered or spread out. Placement turns a small sign into a composition.",
+    "Le même motif change selon qu’on le regroupe ou qu’on le disperse. Sa disposition en fait une composition."
+  ],
+  [
+    "Beim Erinnern bleiben oft einzelne Dinge deutlicher als ihre Umgebung. Ein zweiter Blick zeigt, was du übersehen hast.",
+    "We often remember some things more clearly than their surroundings. A second look reveals what we missed.",
+    "On retient souvent certains détails mieux que leur environnement. Un deuxième regard montre ce qui nous avait échappé."
+  ],
+  [
+    "Eine breitere Öffnung verändert den Eindruck der ganzen Vase. Bauch, Rand und leichte Asymmetrie wirken zusammen.",
+    "A wider opening changes the impression of the whole vase. Body, rim and a little asymmetry work together.",
+    "Une ouverture plus large change l’allure du vase entier. Le corps, le bord et une légère asymétrie agissent ensemble."
+  ],
+  [
+    "Auf einer kleinen Karte teilen sich Schrift und Bild wenig Platz. Ein kurzer Gruß lässt der Zeichnung mehr Raum.",
+    "On a small card, words and images share limited space. A short message leaves more room for the drawing.",
+    "Sur une petite carte, texte et image se partagent peu de place. Un message court laisse respirer le dessin."
+  ],
+  [
+    "Mehr Schlaufen verdichten die Oberfläche. Der Raum innerhalb der Form bleibt derselbe, aber du siehst weniger hindurch.",
+    "More loops make the surface denser. The space inside stays the same, but you see less through it.",
+    "Davantage de boucles rendent la surface plus dense. L’espace intérieur reste le même, mais on voit moins à travers."
+  ],
+  [
+    "Auch Gewohnheiten, Erinnerungen und Wünsche können ein Porträt ergeben. Ein Selbstbild muss nicht nur beschreiben, wie jemand aussieht.",
+    "Habits, memories and wishes can form a portrait too. A self-portrait can describe more than appearance.",
+    "Habitudes, souvenirs et envies peuvent aussi former un portrait. Un autoportrait peut raconter autre chose que l’apparence."
+  ],
+  [
+    "Beim Falten verändert sich nicht nur der Umriss. Manche Flächen verdecken andere, und auch der Raum dazwischen wird anders.",
+    "Folding changes more than the outline. Some planes hide others, and the spaces between them change too.",
+    "Le pliage ne change pas seulement le contour. Certaines faces en cachent d’autres, et les espaces entre elles se transforment aussi."
+  ],
+  [
+    "Die Stiche machen die Verbindungen sichtbar. Eine offene Naht lässt zwei Farbflächen stärker als einzelne Teile erscheinen.",
+    "The stitches make the joins visible. An open seam makes two colour fields read more as separate pieces.",
+    "Les points rendent les jonctions visibles. Une couture ouverte fait davantage apparaître deux surfaces comme des morceaux distincts."
+  ],
+  [
+    "Eine andere Kopfform oder ein anderer Rock verändern die Silhouette. Schon wenige Teile reichen für sehr unterschiedliche Kostüme.",
+    "Changing the headpiece or skirt changes the silhouette. Just a few pieces can make very different costumes.",
+    "Une autre coiffe ou une autre jupe change la silhouette. Quelques éléments suffisent à créer des costumes très différents."
+  ],
+  [
+    "Ein Grundriss kann auch aus Erinnerung entstehen. Welche Stellen du auswählst, zeigt, was dir an einem Raum wichtig ist.",
+    "A floor plan can begin with memory. The spaces you choose show what matters to you about a room.",
+    "Un plan peut aussi naître d’un souvenir. Les cases choisies montrent ce qui compte pour toi dans une pièce."
+  ],
+  [
+    "Die einzelnen Dinge bleiben vertraut. Erst ihre ungewöhnliche Kombination macht die Szene seltsam.",
+    "Each thing remains familiar. Their unusual combination makes the scene strange.",
+    "Chaque élément reste familier. C’est leur association inhabituelle qui rend la scène étrange."
+  ],
+  [
+    "Der Henkel verändert nicht nur die Silhouette. Größe und Seite entscheiden auch darüber, wie du dir das Halten der Tasse vorstellst.",
+    "The handle changes more than the silhouette. Its size and position affect how you imagine holding the cup.",
+    "L’anse ne change pas seulement la silhouette. Sa taille et sa position modifient aussi la façon dont on imagine tenir la tasse."
+  ],
+  [
+    "Hier vergleichen wir die Wege zwischen vier Stationen. Eine andere Reihenfolge kann den Ablauf verkürzen, ohne dass der Raum größer wird.",
+    "Here we compare routes between four stations. A different order can shorten the route without making the room bigger.",
+    "On compare ici le trajet entre quatre postes. Un autre ordre peut raccourcir le parcours sans agrandir la pièce."
+  ],
+  [
+    "An Wand, Boden und Decke liest du denselben Zweig anders. Sein Platz entscheidet mit darüber, wie du den Raum wahrnimmst.",
+    "The same branch reads differently on a wall, floor or ceiling. Its position helps shape how you perceive the room.",
+    "La même branche se lit différemment sur le mur, le sol ou le plafond. Son emplacement participe à la perception de la pièce."
+  ],
+  [
+    "Die Ausschnitte bleiben gleich, ihre Nachbarschaften ändern sich. Dadurch entstehen andere Figuren und neue Zusammenhänge.",
+    "The fragments stay the same; their neighbours change. That creates different figures and new connections.",
+    "Les fragments restent identiques, mais leurs voisins changent. D’autres figures et de nouveaux liens apparaissent."
+  ],
+  [
+    "Beim Vergrößern verlierst du den Überblick über die ganze Blüte. Dafür werden einzelne Linien und Farbübergänge deutlicher.",
+    "Enlarging the flower hides the overall shape but brings individual lines and colour transitions into focus.",
+    "En agrandissant la fleur, on perd sa forme d’ensemble, mais les lignes et les passages de couleur deviennent plus visibles."
+  ],
+  [
+    "Die Linien müssen nicht gleich sein, damit eine Ordnung entsteht. Kleine Abweichungen zeigen, dass eine Hand sie gezogen hat.",
+    "Lines do not need to be identical to create an order. Small variations show the hand that drew them.",
+    "Les lignes n’ont pas besoin d’être identiques pour former un ensemble ordonné. Leurs variations gardent la trace de la main."
+  ],
+  [
+    "Sitzplätze, Zugang und Treffpunkt verändern, wer einen Ort wie nutzen kann. Gestaltung betrifft also auch das Zusammenleben.",
+    "Seating, access and meeting points affect who can use a place and how. Design shapes shared life too.",
+    "Les sièges, l’accès et le point de rencontre influencent l’usage d’un lieu. Le design concerne aussi la vie en commun."
+  ]
+];
+
+function artistCopy(day,language){const [title,text,task,motif]=ARTIST_COPY[language][day-1].split('|');return{title,text,task,motif};}
