@@ -15,7 +15,7 @@ Object.entries(REPLACEMENTS).forEach(([d,[name,years,source,mak]])=>ARTISTS[d-1]
 const ARTIST_COPY = {
   "de": [
     "Formen, die zusammenpassen|Sophie Taeuber-Arp arbeitete mit Textilien, Marionetten, Möbeln und Architektur. Ihre geometrischen Formen findet man auf kleinen Gegenständen genauso wie in ganzen Räumen.|Tippe die Formen an und drehe sie. Such einen Rhythmus, der dir gefällt. Lass dann eine Form bewusst aus der Reihe tanzen.|Formen und Rhythmus",
-    "Fotografieren ohne Kamera|Anna Atkins verband Botanik und Fotografie. Sie legte Algen direkt auf lichtempfindliches Papier: Nach dem Belichten und Auswaschen blieben ihre hellen Umrisse auf blauem Grund zurück.|Lege drei Blätter auf das Papier. Drücke dann auf „Belichten“. Wo die Blätter lagen, bleibt das Papier hell.|Blätter auf blauem Papier",
+    "Fotografieren ohne Kamera|Anna Atkins verband Botanik und Fotografie. Sie legte Algen direkt auf lichtempfindliches Papier: Nach dem Belichten und Auswaschen blieben ihre hellen Umrisse auf blauem Grund zurück.|Füge bis zu drei Blätter hinzu und drücke dann auf „Belichten“. Wo sie das Papier abdecken, bleibt es hell.|Blätter auf blauem Papier",
     "Dasselbe Rosa, ganz anders|Sonia Delaunay entwarf Bilder, Stoffe, Kleider und Einrichtungsgegenstände. Sie beschäftigte sich damit, wie Farben nebeneinander wirken. Ein Farbton kann je nach Umgebung ganz anders erscheinen.|Wechsle die Farbe um das Rosa herum. Das Rosa selbst bleibt gleich. Auf welchem Hintergrund wirkt es für dich am hellsten?|Farbige Kreise und Stoffstreifen",
     "Ein Muster für die ganze Wand|Mathilde Flögl entwarf für die Wiener Werkstätte unter anderem Tapeten, Textilien und Bücher. Bei einer Tapete zählt nicht nur das einzelne Motiv, sondern auch, wie es sich über die Wand wiederholt.|Verändere den Abstand zwischen den Motiven. Probier dann eine versetzte Anordnung. Welche Tapete würdest du zu Hause haben wollen?|Ein Tapetenentwurf",
     "Platz zwischen den Farben|Alma Thomas malte abstrakte Bilder aus vielen kleinen Farbstrichen. Oft bleibt zwischen ihnen der helle Bildgrund sichtbar. Diese Lücken gehören ebenso zum Bild wie die Farbe.|Verändere die Lücken zwischen den Farbstrichen. Wann wirkt die Fläche ruhig, wann bewegt? Wähle deinen Lieblingsabstand.|Farbstriche mit Zwischenräumen",
@@ -28,8 +28,8 @@ const ARTIST_COPY = {
     "Ein Selbstporträt ohne Spiegel|Paula Modersohn-Becker malte Frauen, Kinder und viele Selbstbildnisse. Dabei stellte sie Menschen ohne die damals üblichen Idealisierungen dar. Ihr eigenes Gesicht und ihr Körper wurden zu wiederkehrenden Motiven.|Ergänze die drei Satzanfänge. Lass Beruf und Aussehen weg. Was erzählt sonst noch etwas über dich?|Ein Spiegel mit einem leeren Blatt",
     "Eine Form zum Aufklappen|Lygia Clark machte das Verändern eines Kunstwerks zum Teil der künstlerischen Erfahrung. Bei ihren beweglichen Metallarbeiten entsteht die Form auch durch die Hände der Person, die sie aufklappt.|Klappe die verbundenen Flächen auf und zu. Schau seitlich und von oben darauf. Welche Stellung überrascht dich?|Miteinander verbundene Flächen",
     "Mit einem Faden verbinden|Pacita Abad verband Malerei mit textilen Techniken. Sie nähte, polsterte und ergänzte ihre bemalten Leinwände mit weiteren Materialien. So bekamen die Bilder eine spürbare Tiefe.|Verbinde die farbigen Stoffstücke mit Stichen. Tippe auf die kleinen Verbindungen. Lass mindestens eine Naht offen.|Ein genähtes Stoffstück",
-    "Ein Kostüm, das auffällt|Maria Likarz-Strauss gestaltete Stoffe, Mode und Druckgrafik für die Wiener Werkstätte. Auch Faschingskostüme gehörten zu ihren Entwürfen. Kleidung war für sie damit sowohl Gebrauchsgegenstand als auch Bildmotiv.|Kombiniere eine Kopfform, ein Oberteil und einen Rock zu einem Papierkostüm. Würdest du so auf ein Fest gehen?|Ein Papierkostüm",
-    "Ein Raum aus der Erinnerung|Louise Bourgeois beschäftigte sich in Zeichnungen, Skulpturen und Druckgrafiken immer wieder mit Erinnerungen und Beziehungen. Häuser und Räume konnten dabei für persönliche Erfahrungen stehen.|Tippe die Felder an und skizziere den Grundriss eines vertrauten Raums. Welche Bereiche fallen dir zuerst ein?|Ein Haus und ein Faden",
+    "Ein Kostüm, das auffällt|Maria Likarz-Strauss gestaltete Stoffe, Mode und Druckgrafik für die Wiener Werkstätte. Auch Faschingskostüme gehörten zu ihren Entwürfen. Kleidung war für sie damit sowohl Gebrauchsgegenstand als auch Bildmotiv.|Kombiniere eine Kopfschmuck, ein Oberteil und einen Rock zu einem Papierkostüm. Würdest du so auf ein Fest gehen?|Ein Papierkostüm",
+    "Ein Raum aus der Erinnerung|Louise Bourgeois beschäftigte sich in Zeichnungen, Skulpturen und Druckgrafiken immer wieder mit Erinnerungen und Beziehungen. Häuser und Räume konnten dabei für persönliche Erfahrungen stehen.|Skizziere ein vertrautes Zimmer aus dem Gedächtnis. Ergänze Tür, Fenster und ein Detail, das dir einfällt. Es geht um deine Erinnerung, nicht um genaue Maße.|Ein Haus und ein Faden",
     "Eine ziemlich seltsame Geschichte|Leonora Carrington war Malerin und Schriftstellerin. In ihren Bildern und Geschichten stehen vertraute Dinge neben erfundenen Wesen. Was im Alltag nicht zusammengehört, kann bei ihr ganz selbstverständlich nebeneinander vorkommen.|Wähle drei Teile für den Anfang einer Geschichte. Nimm die ungewöhnlichste Kombination. Du musst sie nicht erklären.|Eine Teekanne auf Reisen",
     "Aus welcher Tasse trinkst du?|Jutta Sika gestaltete Geschirr und grafische Arbeiten. Das MAK bewahrt ein Modell einer Tasse mit Untertasse nach ihrem Entwurf. An so einem Alltagsgegenstand lässt sich gut beobachten, wie Form und Gebrauch zusammenhängen.|Setze den Henkel nach links oder rechts und ändere seine Größe. Denk daran, wie du die Tasse tatsächlich halten würdest.|Tasse und Untertasse",
     "Kurze Wege in der Küche|Margarete Schütte-Lihotzky plante die Frankfurter Küche für kleine Wohnungen. Die Anordnung sollte Arbeitsabläufe vereinfachen und Wege verkürzen. Im MAK steht ein Nachbau, der mit ihrer Beteiligung entstand.|Ordne Vorrat, Spüle, Arbeitsfläche und Herd neu. Vergleiche den Weg für „holen, waschen, schneiden, kochen“.|Eine kleine Küche von oben",
@@ -37,11 +37,11 @@ const ARTIST_COPY = {
     "Aus Teilen wird etwas Neues|Hannah Höch arbeitete mit Fotomontage und Collage. Sie schnitt Bilder aus ihrem ursprünglichen Zusammenhang heraus und setzte sie neu zusammen. Dadurch konnten sich Gesichter, Körper und ihre Bedeutung verändern.|Verschiebe die drei Bildstreifen gegeneinander. Such eine Kombination, die vorher nicht geplant war.|Papierausschnitte als Collage",
     "Noch ein Stück näher|Georgia O’Keeffe malte Blumen oft stark vergrößert. Ein kleines Blütendetail konnte so fast das ganze Bild ausfüllen. Linien, Rundungen und Farbübergänge bekommen dadurch mehr Aufmerksamkeit.|Zoome in die gezeichnete Blüte hinein. Wann siehst du keine Blume mehr, sondern nur noch Linien und Flächen?|Ein stark vergrößertes Blütendetail",
     "Acht ruhige Linien|Agnes Martin arbeitete mit feinen Linien, Rastern und zurückhaltenden Farben. Ihre Bilder wirken zunächst gleichmäßig. Aus der Nähe zeigen sich kleine Unterschiede in den gezeichneten Linien.|Ziehe acht Linien, langsam und ohne Lineal. Schau danach auf die kleinen Unterschiede. Du kannst auch auf Papier zeichnen.|Linien mit kleinen Unterschieden",
-    "Ein Ort für alle|Niki de Saint Phalle schuf farbige Skulpturen und große begehbare Anlagen. Menschen konnten ihre Kunst also auch als Umgebung erleben, statt sie nur von außen anzuschauen.|Gestalte einen kleinen öffentlichen Platz. Füge Sitzplätze, einen stufenlosen Zugang und einen Treffpunkt hinzu. Was ist dir wichtig?|Ein farbiges Tor zu einem Platz"
+    "Ein Ort für alle|Niki de Saint Phalle schuf farbige Skulpturen und große begehbare Anlagen. Menschen konnten ihre Kunst also auch als Umgebung erleben, statt sie nur von außen anzuschauen.|Gestalte einen Platz mit Tor, Bänken und Wegen. Verschiebe, drehe und verändere die Elemente. Wo möchtest du sitzen, wo sollen Menschen gehen und einander treffen?|Ein farbiges Tor zu einem Platz"
   ],
   "en": [
     "Finding a rhythm|Sophie Taeuber-Arp worked with textiles, puppets, furniture and architecture. Her geometric forms appear on small objects as well as across entire rooms.|Tap the shapes to turn them. Find a rhythm you like, then let one shape break the pattern.|Shapes and rhythm",
-    "A photograph without a camera|Anna Atkins brought botany and photography together. She placed algae directly on light-sensitive paper. After exposure and washing, their pale outlines remained against a blue ground.|Place three leaves on the paper, then press “Expose”. The paper stays pale where the leaves covered it.|Leaves on blue paper",
+    "A photograph without a camera|Anna Atkins brought botany and photography together. She placed algae directly on light-sensitive paper. After exposure and washing, their pale outlines remained against a blue ground.|Add up to three leaves, then press “Expose”. The paper stays pale where the leaves cover it.|Leaves on blue paper",
     "The same pink, a different feeling|Sonia Delaunay made paintings, textiles, clothes and furnishings. She explored how colours affect one another: the same shade can look different in a different setting.|Change the colour around the pink. The pink itself stays the same. Which background makes it look brightest to you?|Coloured circles and fabric strips",
     "A pattern for a whole wall|Mathilde Flögl designed wallpapers, textiles and books for the Wiener Werkstätte. With wallpaper, the individual motif matters, but so does the way it repeats across a wall.|Change the distance between the motifs, then try staggered rows. Which wallpaper would you choose for your own home?|A wallpaper sketch",
     "Space between colours|Alma Thomas built abstract paintings from many small strokes of colour. The pale ground often shows between them. Those gaps are as much a part of the picture as the paint.|Change the gaps between the colour marks. When does the surface feel calm or lively? Choose your favourite spacing.|Colour marks with gaps",
@@ -55,7 +55,7 @@ const ARTIST_COPY = {
     "A form you can unfold|Lygia Clark made changing an artwork part of experiencing it. In her hinged metal works, the person unfolding the object also helps give it its form.|Open and close the connected panels. Look from the side and from above. Which position surprises you?|Connected folding panels",
     "Joining things with thread|Pacita Abad combined painting with textile techniques. She stitched, padded and added materials to her painted canvases, giving their surfaces physical depth.|Join the coloured patches with stitches. Tap the small connections. Leave at least one seam open.|A stitched piece of fabric",
     "A costume that stands out|Maria Likarz-Strauss designed fabrics, fashion and printed graphics for the Wiener Werkstätte, including carnival costumes. Clothing was both something to wear and a subject for images.|Choose a headpiece, top and skirt for a paper costume. Would you wear it to a party?|A paper costume",
-    "A room you remember|Louise Bourgeois returned to memories and relationships in her drawings, sculptures and prints. Houses and rooms could take on meanings tied to personal experience.|Select the squares to sketch the floor plan of a familiar room. Which parts come to mind first?|A house and a thread",
+    "A room you remember|Louise Bourgeois returned to memories and relationships in her drawings, sculptures and prints. Houses and rooms could take on meanings tied to personal experience.|Sketch a familiar room from memory. Add a door, windows and a detail you remember. This is about your memory, rather than exact measurements.|A house and a thread",
     "A rather strange story|Leonora Carrington was a painter and writer. Familiar things share her pictures and stories with invented creatures. Things that do not belong together in everyday life can seem perfectly at home there.|Choose three parts for the start of a story. Pick the strangest combination. You do not have to explain it.|A travelling teapot",
     "Which cup would you use?|Jutta Sika designed tableware and graphic works. The MAK holds a model of a cup and saucer from her design. An everyday object like this makes the relationship between form and use tangible.|Move the handle to the left or right and change its size. Think about how you would actually hold the cup.|A cup and saucer",
     "Shorter journeys in the kitchen|Margarete Schütte-Lihotzky planned the Frankfurt Kitchen for small flats. Its layout was intended to simplify work and shorten distances. The MAK holds a reconstruction made with her involvement.|Rearrange the pantry, sink, worktop and cooker. Compare the route for collecting, washing, chopping and cooking.|A small kitchen seen from above",
@@ -63,11 +63,11 @@ const ARTIST_COPY = {
     "Making something new from pieces|Hannah Höch worked with photomontage and collage. She cut images out of their original setting and put them together again, changing faces, bodies and what they might mean.|Slide the three picture strips past each other. Find a combination you did not plan.|Paper fragments in a collage",
     "A little closer|Georgia O’Keeffe often painted flowers on a greatly enlarged scale. A small detail could fill almost the entire picture, drawing attention to lines, curves and transitions in colour.|Zoom into the drawn flower. When do you stop seeing a flower and start seeing lines and shapes?|An enlarged flower detail",
     "Eight quiet lines|Agnes Martin worked with fine lines, grids and restrained colours. Her paintings may look regular at first. Up close, small variations in the drawn lines become visible.|Draw eight lines slowly, without a ruler. Then look at the small differences. You can also draw on paper.|Lines with small differences",
-    "A place for everyone|Niki de Saint Phalle made colourful sculptures and large environments that people could enter. Her work could be experienced as a place, as well as viewed as an object.|Design a small public space. Add seating, step-free access and a meeting point. What matters to you?|A colourful gateway to a square"
+    "A place for everyone|Niki de Saint Phalle made colourful sculptures and large environments that people could enter. Her work could be experienced as a place, as well as viewed as an object.|Design a square with a gateway, benches and paths. Move, rotate and change the elements. Where would you sit, and where should people walk and meet?|A colourful gateway to a square"
   ],
   "fr": [
     "Trouver un rythme|Sophie Taeuber-Arp travaillait le textile, les marionnettes, le mobilier et l’architecture. Ses formes géométriques se retrouvent sur de petits objets comme dans des pièces entières.|Touche les formes pour les tourner. Trouve un rythme qui te plaît, puis laisse une forme sortir du rang.|Des formes et du rythme",
-    "Une photo sans appareil|Anna Atkins associait botanique et photographie. Elle posait des algues directement sur du papier photosensible. Après exposition et rinçage, leurs silhouettes claires apparaissaient sur fond bleu.|Pose trois feuilles sur le papier, puis appuie sur « Exposer ». Le papier reste clair sous les feuilles.|Des feuilles sur du papier bleu",
+    "Une photo sans appareil|Anna Atkins associait botanique et photographie. Elle posait des algues directement sur du papier photosensible. Après exposition et rinçage, leurs silhouettes claires apparaissaient sur fond bleu.|Ajoute jusqu’à trois feuilles, puis appuie sur « Exposer ». Le papier reste clair sous les feuilles.|Des feuilles sur du papier bleu",
     "Le même rose, une autre impression|Sonia Delaunay créait des peintures, des tissus, des vêtements et des objets pour la maison. Elle explorait les relations entre les couleurs : une même teinte peut sembler différente selon ce qui l’entoure.|Change la couleur autour du rose. Le rose reste identique. Sur quel fond te semble-t-il le plus lumineux ?|Des cercles colorés et des bandes de tissu",
     "Un motif pour tout un mur|Mathilde Flögl dessinait notamment des papiers peints, des textiles et des livres pour la Wiener Werkstätte. Sur un mur, un motif compte autant par sa forme que par sa répétition.|Change l’espace entre les motifs, puis essaie des rangées décalées. Quel papier peint choisirais-tu chez toi ?|Une esquisse de papier peint",
     "De l’espace entre les couleurs|Alma Thomas composait ses peintures abstraites avec de petites touches de couleur. Le fond clair reste souvent visible entre elles. Ces espaces font autant partie du tableau que la peinture.|Change les espaces entre les touches. Quand la surface paraît-elle calme ou animée ? Choisis l’écart qui te plaît.|Des touches de couleur espacées",
@@ -81,7 +81,7 @@ const ARTIST_COPY = {
     "Une forme à déplier|Lygia Clark faisait de la transformation d’une œuvre une part de l’expérience artistique. Dans ses sculptures articulées, la personne qui déplie l’objet participe aussi à sa forme.|Ouvre et ferme les panneaux reliés. Regarde-les de côté et d’en haut. Quelle position te surprend ?|Des panneaux reliés qui se plient",
     "Relier avec un fil|Pacita Abad associait la peinture aux techniques textiles. Elle cousait, rembourrait et ajoutait des matières à ses toiles peintes, donnant du relief à leur surface.|Relie les morceaux de tissu avec des points. Touche les petites jonctions. Laisse au moins une couture ouverte.|Un morceau de tissu cousu",
     "Un costume qui se remarque|Maria Likarz-Strauss créait des tissus, de la mode et des imprimés pour la Wiener Werkstätte, dont des costumes de carnaval. Le vêtement était à la fois un objet à porter et un sujet d’image.|Choisis une coiffe, un haut et une jupe pour un costume de papier. Le porterais-tu pour une fête ?|Un costume de papier",
-    "Une pièce dont tu te souviens|Louise Bourgeois revenait aux souvenirs et aux relations dans ses dessins, ses sculptures et ses gravures. Les maisons et les pièces pouvaient évoquer des expériences personnelles.|Choisis les cases pour esquisser le plan d’une pièce familière. Quelles parties te viennent en premier ?|Une maison et un fil",
+    "Une pièce dont tu te souviens|Louise Bourgeois revenait aux souvenirs et aux relations dans ses dessins, ses sculptures et ses gravures. Les maisons et les pièces pouvaient évoquer des expériences personnelles.|Dessine une pièce familière de mémoire. Ajoute une porte, des fenêtres et un détail dont tu te souviens. Ton souvenir compte plus que les mesures exactes.|Une maison et un fil",
     "Une histoire plutôt étrange|Leonora Carrington était peintre et écrivaine. Dans ses images et ses récits, des choses familières côtoient des créatures inventées. Ce qui ne va pas ensemble au quotidien peut y cohabiter tout naturellement.|Choisis trois éléments pour commencer une histoire. Prends la combinaison la plus étrange. Tu n’as pas besoin de l’expliquer.|Une théière en voyage",
     "Dans quelle tasse boire ?|Jutta Sika créait de la vaisselle et des œuvres graphiques. Le MAK conserve un modèle de tasse et de soucoupe d’après son dessin. Cet objet quotidien permet d’observer le lien entre forme et usage.|Place l’anse à gauche ou à droite et change sa taille. Pense à la façon dont tu tiendrais vraiment la tasse.|Une tasse et sa soucoupe",
     "Moins de pas dans la cuisine|Margarete Schütte-Lihotzky a conçu la cuisine de Francfort pour de petits logements. Son agencement devait faciliter le travail et raccourcir les déplacements. Le MAK en conserve une reconstitution réalisée avec sa participation.|Réorganise le garde-manger, l’évier, le plan de travail et la cuisinière. Compare le trajet pour prendre, laver, couper et cuire.|Une petite cuisine vue d’en haut",
@@ -89,7 +89,7 @@ const ARTIST_COPY = {
     "Du nouveau avec des morceaux|Hannah Höch pratiquait le photomontage et le collage. Elle découpait des images pour les sortir de leur contexte et les assembler autrement, transformant les visages, les corps et leur sens.|Décale les trois bandes de l’image. Trouve une combinaison que tu n’avais pas prévue.|Des morceaux de papier en collage",
     "Encore un peu plus près|Georgia O’Keeffe peignait souvent des fleurs très agrandies. Un petit détail pouvait occuper presque tout le tableau, attirant l’attention sur les lignes, les courbes et les passages de couleur.|Zoome dans la fleur dessinée. À quel moment ne vois-tu plus une fleur, mais des lignes et des surfaces ?|Un détail de fleur agrandi",
     "Huit lignes tranquilles|Agnes Martin travaillait avec des lignes fines, des grilles et des couleurs discrètes. Ses tableaux semblent réguliers au premier regard. De près, de petites variations apparaissent dans le tracé.|Trace huit lignes lentement, sans règle. Regarde ensuite leurs petites différences. Tu peux aussi dessiner sur papier.|Des lignes légèrement différentes",
-    "Un lieu pour tout le monde|Niki de Saint Phalle créait des sculptures colorées et de grands ensembles où l’on pouvait entrer. Son art pouvait ainsi se vivre comme un lieu, autant que se regarder comme un objet.|Imagine une petite place publique. Ajoute des sièges, un accès sans marches et un point de rencontre. Qu’est-ce qui compte pour toi ?|Une porte colorée vers une place"
+    "Un lieu pour tout le monde|Niki de Saint Phalle créait des sculptures colorées et de grands ensembles où l’on pouvait entrer. Son art pouvait ainsi se vivre comme un lieu, autant que se regarder comme un objet.|Compose une place avec une porte, des bancs et des chemins. Déplace, tourne et transforme les éléments. Où aimerais-tu t’asseoir ? Où peut-on circuler et se retrouver ?|Une porte colorée vers une place"
   ]
 };
 
@@ -171,7 +171,7 @@ const UI = {
     "side": "Seitlich",
     "above": "Von oben",
     "stitch": "Naht",
-    "head": "Kopfform",
+    "head": "Kopfschmuck",
     "top": "Oberteil",
     "skirt": "Rock",
     "room": "Raumfeld",
@@ -545,8 +545,8 @@ const OPTIONS = {
       ],
       [
         "träumt von",
-        "versteckt",
-        "besucht"
+        "erzählt von",
+        "reist zu"
       ],
       [
         "einem Wintergarten",
@@ -906,14 +906,14 @@ const ARTIST_OBSERVATIONS = [
     "Les points rendent les jonctions visibles. Une couture ouverte fait davantage apparaître deux surfaces comme des morceaux distincts."
   ],
   [
-    "Eine andere Kopfform oder ein anderer Rock verändern die Silhouette. Schon wenige Teile reichen für sehr unterschiedliche Kostüme.",
+    "Ein anderer Kopfschmuck oder ein anderer Rock verändern die Silhouette. Schon wenige Teile reichen für sehr unterschiedliche Kostüme.",
     "Changing the headpiece or skirt changes the silhouette. Just a few pieces can make very different costumes.",
     "Une autre coiffe ou une autre jupe change la silhouette. Quelques éléments suffisent à créer des costumes très différents."
   ],
   [
-    "Ein Grundriss kann auch aus Erinnerung entstehen. Welche Stellen du auswählst, zeigt, was dir an einem Raum wichtig ist.",
-    "A floor plan can begin with memory. The spaces you choose show what matters to you about a room.",
-    "Un plan peut aussi naître d’un souvenir. Les cases choisies montrent ce qui compte pour toi dans une pièce."
+    "Aus der Erinnerung entsteht kein exakter Bauplan. Einzelne Dinge werden deutlich, andere bleiben offen. So zeigt deine Skizze auch, wie du diesen Raum erlebt hast.",
+    "Memory does not make an exact floor plan. Some details come back clearly while others remain open. Your sketch also shows how you experienced the room.",
+    "La mémoire ne produit pas un plan exact. Certains détails reviennent clairement, d’autres restent flous. Ton croquis montre aussi comment tu as vécu cette pièce."
   ],
   [
     "Die einzelnen Dinge bleiben vertraut. Erst ihre ungewöhnliche Kombination macht die Szene seltsam.",
@@ -951,9 +951,9 @@ const ARTIST_OBSERVATIONS = [
     "Les lignes n’ont pas besoin d’être identiques pour former un ensemble ordonné. Leurs variations gardent la trace de la main."
   ],
   [
-    "Sitzplätze, Zugang und Treffpunkt verändern, wer einen Ort wie nutzen kann. Gestaltung betrifft also auch das Zusammenleben.",
-    "Seating, access and meeting points affect who can use a place and how. Design shapes shared life too.",
-    "Les sièges, l’accès et le point de rencontre influencent l’usage d’un lieu. Le design concerne aussi la vie en commun."
+    "Wenn du Bänke, Wege und Treffpunkte anders anordnest, verändert sich der Platz: Es entstehen freie Wege, enge Ecken oder Orte zum Zusammensitzen.",
+    "Moving benches, paths and meeting points changes the square: it creates open routes, tight corners or places to sit together.",
+    "Déplacer les bancs, les chemins et les points de rencontre transforme la place : des passages se dégagent, des coins se resserrent ou invitent à s’asseoir ensemble."
   ]
 ];
 
