@@ -45,8 +45,7 @@ for(let row=0;row<3;row++)line([[320,239+row*17],[489,225+row*19],[746,245+row*1
 // Ground and fine structural lines remain incomplete rather than outlining every patch.
 line([[218,323],[211,575],[216,815],[201,1234]],ink,4,.65);line([[1050,338],[1058,791],[1064,1245]],ink,5,.55);
 for(let y of [548,762,976])line([[232,y],[420,y+4],[678,y-5],[1035,y+8]],'#4b5260',1.4,.36);
-// House lettering, drawn into the plaster rather than held in a label box.
-c.save();c.translate(634,365);c.rotate(.008);c.fillStyle='#364552';c.font='31px Della';c.textAlign='center';c.fillText('Atelier des possibles',0,0);c.restore();
+// The title belongs above the house; the plaster stays free of lettering.
 const numbers=[[7,1,15,3,21,9],[11,19,4,17,6,23],[20,8,16,10,13,22],[12,5,2,14,18,24]],xs=[290,419,550,687,822,951],ys=[412,612,817,1022];
 function window(x,y,w,h,num,index){
  c.save();c.translate(x,y);c.rotate(between(-.035,.035));
