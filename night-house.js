@@ -59,15 +59,11 @@ function window(x,y,w,h,num,index){
  c.save();c.translate(x,y);c.rotate(angle);
  const opening=[[-w*.5,0],[w*.48,between(-3,2)],[w*.52,h],[-w*.49,h+between(-3,3)]];
  const lit=[5,9,17].includes(num);
- if(lit){c.save();const glow=c.createRadialGradient(0,h*.5,8,0,h*.5,110);glow.addColorStop(0,'#ffce7966');glow.addColorStop(1,'#ffce7900');c.fillStyle=glow;c.fillRect(-130,-90,260,h+180);c.restore();}
- polygon(opening,lit?'#eeb65c':'#14253e',lit?'#ffdf90':'#253652',11);
+ if(lit){c.save();const glow=c.createRadialGradient(0,h*.5,8,0,h*.5,110);glow.addColorStop(0,'#f0c88740');glow.addColorStop(1,'#ffce7900');c.fillStyle=glow;c.fillRect(-130,-90,260,h+180);c.restore();}
+ polygon(opening,lit?'#d8ae6a':'#14253e',lit?'#f3d59a':'#253652',11);
  // Different shutter positions and pigment histories, without revealing artists.
  let cols=['#34578b','#7f4f59','#4a4c6b','#3d635f','#293e62','#655872'],col=cols[index%cols.length];
- if(lit){c.save();c.fillStyle='#ffda86';c.globalAlpha=.86;c.fillRect(-w*.36,4,w*.72,h-9);c.restore();line([[0,6],[1,h-5]],'#ae824a',1.8,.75);}
- const leftW=lit?w*.12:index%4===0?w*.21:w*.47,rightW=lit?w*.13:index%5===0?w*.22:w*.44;
- if(!lit)polygon([[-w*.5,2],[-w*.5+leftW,-1],[-w*.5+leftW,h-4],[-w*.52,h+1]],col,'#687b91',8);
- if(!lit)polygon([[w*.5-rightW,2],[w*.5,0],[w*.49,h],[w*.5-rightW,h-3]],cols[(index+2)%6],'#526780',8);
- if(!lit)for(let sy=13;sy<h-5;sy+=between(12,18)){line([[-w*.47,sy],[-w*.5+leftW-3,sy-1]],ink,1.5,.55);line([[w*.5-rightW+3,sy],[w*.46,sy+1]],ink,1.5,.52);}
+ if(lit){c.save();c.fillStyle='#f1cf91';c.globalAlpha=.86;c.fillRect(-w*.36,4,w*.72,h-9);c.restore();line([[0,6],[1,h-5]],'#ae824a',1.8,.75);}
  // Some stone surrounds are interrupted; the charcoal construction is still visible.
  line([[-w*.6,h+3],[-w*.57,-7],[w*.52,-9],[w*.6,h+2]],chalk,6,.7);
  if(index%3===0)line([[-w*.62,-5],[-w*.3,-24],[w*.2,-22],[w*.6,-7]],'#4e5864',3,.7);
